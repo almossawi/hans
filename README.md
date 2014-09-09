@@ -17,5 +17,5 @@ Feel free to fork the project and submit suggested changes as Pull Requests.
 
 
 ## Credits
-* Art direction: Ali Almossawi
+* Creative, art direction: Ali Almossawi
 * Illustration: Alejandro Giraldo
