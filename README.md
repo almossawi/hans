@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://bookofalgorithms.com/">
-    <img src="http://bookofalgorithms.com/images/logo.png?v=2" hspace="0" vspace="0" width="400" height="453">
+    <img src="http://bookofalgorithms.com/images/logo.png?v=2" hspace="0" vspace="0" width="600" height="548">
   </a>
 </p>
 
