@@ -14,3 +14,8 @@ Feel free to fork the project and submit suggested changes as Pull Requests.
 
 ## Resources
 * [Official website](http://bookofalgorithms.com)
+
+
+## Credits
+* Art direction: Ali Almossawi
+* Illustration: Alejandro Giraldo
