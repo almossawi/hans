@@ -4,10 +4,10 @@
   </a>
 </p>
 
-_A Book of Algorithms_ is an upcoming three-part story about a witty tailor in a foreign land who learns how to think by learning about a set of fundamental computing algorithms. This repository will include the entire codebase for the project, to encourage and facilitate collaboration. Of course, you are also welcome to send me your comments via email or [Twitter](https://twitter.com/alialmossawi).
+_Hans in the Land of Bards_ is an upcoming adventure story about a witty tailor and his witty accomplice who struggle to escape a land where things aren't always what they seem. In the process, they learn about fundamental computing algorithms.
 
 ## Release date
-The project is planned for release in late 2014. I will send out an email to the mailing list once the project is released. You can add yourself to the list by visiting the website.
+The project is planned for release in March 2015. I will send out an email to the mailing list once the project is released. You can add yourself to the list by visiting the website.
 
 ## How to contribute
 Feel free to fork the project and submit suggested changes as Pull Requests.
