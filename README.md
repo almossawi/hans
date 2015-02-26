@@ -4,7 +4,7 @@
   </a>
 </p>
 
-_Hans in the Land of Bards_ is an upcoming adventure story about a witty tailor and his witty accomplice who struggle to escape a land where things aren't always what they seem. In the process, they learn about fundamental computing algorithms.
+_Hans in the Land of Bards_ is an upcoming adventure story about a tailor and his quick-witted accomplice who struggle to escape a land where things aren't always what they seem. In the process, they learn about fundamental computing algorithms.
 
 ## Release date
 The project is planned for release in March 2015. I will send out an email to the mailing list once the project is released. You can add yourself to the list by visiting the website.
