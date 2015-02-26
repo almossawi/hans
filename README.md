@@ -13,7 +13,7 @@ The project is planned for release in March 2015. I will send out an email to th
 Feel free to fork the project and submit suggested changes as Pull Requests.
 
 ## Resources
-* [Official website](http://bookofalgorithms.com)
+* [Official website](http://thelandofbards.com)
 
 
 ## Credits
