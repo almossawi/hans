@@ -10,7 +10,7 @@ _Hans in the Land of Bards_ is an adventure story about an absent-minded tailor 
 The project is planned for release in March 2015. I will send out an email to the mailing list once the project is released. You can add yourself to the list by visiting the website.
 
 ## How to contribute
-Feel free to fork the project and submit suggested changes as Pull Requests.
+Feel free to fork the project and submit suggestions as Pull Requests.
 
 ## Resources
 * [Official website](http://thelandofbards.com)
