@@ -25,4 +25,4 @@ The website uses [MetricsGraphics.js](http://metricsgraphicsjs.org/) and [D3](ht
 
 ## License
 
-This project's code is shared under the terms of the [Creative Commons BY-NC license](https://creativecommons.org/licenses/by-nc/3.0/us/). The embedded icons are courtesy of [Font Awesome](http://fortawesome.github.io/Font-Awesome/).
+This project's code and content are shared under the terms of the [Creative Commons BY-NC license](https://creativecommons.org/licenses/by-nc/3.0/us/). The embedded icons are courtesy of [Font Awesome](http://fortawesome.github.io/Font-Awesome/).
