@@ -1,0 +1,682 @@
+a, 
+a:active, 
+a:link, 
+a:visited {
+    border-bottom: 1px solid #dfdfdf;
+    color: #3b3b3b;
+    text-decoration: none;
+}
+
+a.no-underline, 
+a.no-underline:active, 
+a.no-underline:link, 
+a.no-underline:visited {
+    border-bottom: 0;
+}
+
+a.tiny-button,
+a:active.tiny-button, 
+a:link.tiny-button, 
+a:visited.tiny-button {
+    border-bottom: 0;
+    padding-right: 15px;
+}
+
+.anchor i {
+    color: #525151;
+    font-size: 0.9rem;
+}
+
+.authors-intro-signature {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* borrowed from medium... */
+.bottom-bar {
+    background: rgba(255, 255, 255, 0.95);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    bottom: 0;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.3);
+    display: block;
+    font-family: 'Open Sans', Arial, sans-serif;
+    padding: 0 10px 0 10px;
+    position: fixed;
+    height: 50px;
+    z-index: 5;
+    width: 100%;
+}
+
+.bottom-bar-copy {
+    position: relative;
+    z-index: 5;
+    float: left !important;
+}
+
+.bottom-bar-copy a i {
+    line-height: 50px;
+}
+
+/* this will be our little secret... */
+.bottom-bar-copy a.go-to-top i {
+    color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: color 0.2s ease;
+    width: 30px;
+}
+
+.bottom-bar-copy a.go-to-support-section i {
+    width: 260px;
+}
+
+.bottom-bar-copy a i:hover,
+.bottom-bar-share a i:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* that's a really nice laptop you have there... */
+.bottom-bar-share {
+    position: relative;
+    z-index: 5;
+    float: right !important;
+}
+
+/* shame if something were to happen to it. */
+.bottom-bar-share a i {
+    color: rgba(0, 0, 0, 0.4);
+    height: auto;
+    line-height: 50px;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    top: 0;
+    text-rendering: optimizeLegibility;
+    transition: color 0.2s ease;
+    -webkit-font-smoothing: antialiased;
+    white-space: normal;
+    width: 40px;
+}
+
+.bottom-hans {
+    display: inline-block;
+    line-height: 50px;
+    margin-left: 10px;
+}
+
+.bottom-part-i-of-iii {
+    opacity: 0.4;
+}
+
+.btn {
+    padding: 4px 12px;
+}
+
+.btn-group {
+    font-family: 'Open Sans', Arial, sans-serif;
+    padding-left: 70px;
+    min-width: 316px;
+}
+
+.btn-primary {
+    background-color: #3a90f0;
+}
+
+.caption {
+    display: none;
+    line-height: 1.3;
+    margin: 10px 0 0 0;
+    text-align: left;
+}
+
+.chart {
+    height: 300px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.chart svg {
+    margin: 0 auto;
+}
+
+code {
+    background-color: #f3f6f6;
+    color: #3fb0ba;
+}
+
+.code-high-bottom {
+    padding-bottom: 12px;
+}
+
+.code-high-top {
+    padding-top: 12px;
+}
+
+.concepts {
+    height: 160px;
+    overflow: hidden;
+}
+
+.concepts p {
+    margin-bottom: 28px;
+}
+
+.concepts-gradient {
+    background-image: url(../images/gradient.png);
+    background-repeat: repeat-x;
+    height: 200px;
+    position: absolute;
+    width: 900px;
+    z-index: 2;
+}
+
+.content {
+    padding-right: 40px;
+}
+
+.content p {
+    margin-bottom: 28px;
+}
+
+.equation {
+    font-family: Times, 'Times New Roman', serif;
+    font-style: italic;
+}
+
+.expand {
+    font-family: 'Gill Sans', 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.fb-btn {
+    margin-top: -9px;
+}
+
+.footer {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    margin: 80px 0 40px 0;
+    width: 100%;
+}
+
+.footer {
+    margin: 30px 0 30px 0;
+    padding: 20px 0 0 0;
+}
+
+.footer p {
+    color: #868686;
+    font-family: Open Serif, Times, serif;
+    font-size: 0.9rem;
+    line-height: 2;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.footer p.hardcover-sneak-prose {
+    margin-bottom: 30px;
+}
+
+.footer-content {
+    margin: 0 auto;
+    width: 900px;
+}
+
+.footnote {
+    display: none;
+    line-height: 1.5;
+    position: absolute;
+    text-indent: 0;
+    width: 202px;
+}
+
+.hardcover-sneak {
+    padding: 110px 0 30px 0;
+}
+
+.high-top {
+    padding-top: 70px;
+}
+
+html, body {
+    background: #fff;
+    font-size: 13px;
+    font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.huffman-animation {
+    height: 155px;
+}
+
+.huffman-animation .row {
+    cursor: pointer;
+}
+
+.huffman-animation .column .row .value {
+    padding-left: 0;
+    text-align: right;
+}
+
+.huffman-animation .column {
+    border-right: 1px solid #ccc;
+    font-size: 0.9rem;
+    width: 14%;
+}
+
+.huffman-tree {
+    margin: 0 auto 40px auto;
+    height: 200px;
+    width: 540px;
+}
+
+img.cover-image {
+    width: 900px;
+}
+
+img.thumb-image {
+    width: 100%;
+}
+
+.leaf {
+    cursor: pointer;
+}
+
+.leaf circle {
+    fill: #3fb0ba;
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+.legend {
+    font-size: 0.9rem;
+    margin-left: 50px;
+    padding: 25px 0 35px 0;
+    text-align: center;
+}
+
+.link {
+    fill: none;
+    stroke: #ccc;
+}
+
+.link-text {
+    cursor: pointer;
+    fill: #ccc;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 0.9rem;
+}
+
+.link-text.active {
+    fill: #4e4e4e;    
+}
+
+.link.active {
+    stroke:  #4e4e4e;
+}
+
+.lowercase-this-motha {
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+.main-container {
+    font-size: 1.4rem;
+    margin: 0 auto 50px auto;
+    width: 900px;
+}
+
+.main-container p.prose-for-the-reader {
+    line-height: 1.6;
+    text-transform: none;
+}
+
+#mc_embed_signup {
+    font: 14px;
+    width: 100%;
+}
+
+/* override mg style defaults */
+.mg-active-datapoint {
+    fill: black;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.mg-area1-color {
+    fill: #3fb0ba;
+}
+
+.mg-area2-color {
+    fill: #db4437;
+}
+
+.mg-area3-color {
+    fill: #5c5c5c;
+}
+
+.mg-area4-color {
+    fill: #eb9b00;
+}
+
+.mg-area5-color {
+    fill: #05b378;
+}
+
+.mg-line1-color {
+    stroke: #3fb0ba;
+}
+
+.mg-line2-color {
+    stroke: #db4437;
+}
+
+.mg-line3-color {
+    stroke: #5c5c5c;
+}
+
+.mg-line4-color {
+    stroke: #eb9b00;
+}
+
+.mg-line5-color {
+    stroke: #05b378;
+}
+
+.mg-line1-legend-color {
+    color: #3fb0ba;
+}
+
+.mg-line2-legend-color {
+    color: #db4437;
+}
+
+.mg-line3-legend-color {
+    color: #5c5c5c;
+}
+
+.mg-line4-legend-color {
+    color: #eb9b00;
+}
+
+.mg-line5-legend-color {
+    color: #05b378;
+}
+/* end override mg style defaults */
+
+.mommy-people-like-me {
+    margin: 0 auto;
+    width: 660px;
+}
+
+.node circle {
+    fill: #e8f0f1;
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+.opening-letter {
+    color: #222;
+    float: left;
+    font-size: 6.7rem;
+    font-weight: bold;
+    line-height: 0.8;
+    padding: 0px 10px 0px 0px;
+}
+
+.opening-padding {
+    position: absolute;
+    margin-top: 20px;
+    height: 40px;
+}
+
+p {
+    letter-spacing: .01rem;
+    line-height: 2;
+    opacity: 0.95;
+    /*text-indent: 40px;*/
+    word-wrap: break-word;
+}
+
+p.authors-intro {
+    color: #333;
+    font-size: 1.32rem;
+    font-style: italic;
+    line-height: 1.9;
+    margin: 60px 0 100px 0;
+    text-align: justify;
+    opacity: 0.6;
+}
+
+p.authors-outro {
+    color: #333;
+    font-size: 1.32rem;
+    font-style: italic;
+    line-height: 1.9;
+    margin: 100px 0 0 0;
+    opacity: 0.6;
+}
+
+p.no-indent {
+    text-indent: 0;
+}
+
+p.stripe {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 0.8rem;
+    padding-top: 0;
+    margin-top: 0;
+    text-indent: 0;
+    text-transform: auto;
+}
+
+.paypal-copy {
+    color: #3a90f0;
+    display: inline-block;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1rem;
+    margin-left: 317px;
+    margin-top: 10px;
+    position: absolute;
+    vertical-align: middle;
+    z-index: 0;
+}
+
+.paypal-copy-first-bit {
+    float: left;
+    margin-top: 2px;
+}
+
+.paypal-copy-last-bit {
+    float: left;
+    margin-left: 8px;
+}
+
+.paypal-form {
+    position: absolute;
+    z-index: 2;
+}
+
+.pic {
+    display: none;
+    position: absolute;
+    text-align: center;
+    width: 202px;
+}
+
+pre {
+    background-color: #f3f6f6;
+    border: 1px solid #c7e2e2;
+    color: #3fb0ba;
+    margin: 30px 300px 30px 300px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.serif {
+    font-family: 'Open Serif', Times, serif;
+}
+
+.sidebar {
+    color: #9b9a9a;
+    font-family: 'Gill Sans', 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+}
+
+.show-tooltip {
+    display: none;
+    opacity: 0.4;
+}
+
+.social-btn {
+    display: inline-block;
+    height: 23px;
+    padding: 0 4px 0 4px;
+    min-width: 55px;
+    vertical-align: middle;
+}
+
+.social-buttons {
+    margin: 40px 0 80px 0;
+}
+
+.stripe-block {
+    margin-top: 10px;
+}
+
+.stripe-form {
+    margin-top: 2px;
+}
+
+.stripe-button-el {
+    margin-left: 1px;
+}
+
+sup, sub {
+    font-size: 0.8rem;
+    position: relative;
+    top: -0.4em;
+    vertical-align: baseline;
+}
+
+sub {
+    top: 0.4em;
+}
+
+.support-donate,
+.support-join-mailing-list {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding-right: 7px;
+    text-align: justify;
+}
+
+.support-section-anchor {
+    height: 20px;
+}
+
+.switch {
+    background-color: transparent;
+    color: inherit;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 0.9rem;
+    padding: 3px;
+}
+
+.switch.active {
+    background-color: #3fb0ba;
+    border-radius: 3px;
+    color: white;
+}
+
+.switch-box {
+    margin-left: 70px;
+}
+
+.table {
+    font-size: 0.9rem;
+}
+
+.table-high-top {
+    margin-top: 26px;
+}
+
+text {
+    font: 0.9rem serif;
+}
+
+.top-author {
+    color: #333;
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 1.4;
+    margin: 25px 0 5px 0;
+    padding: 0;
+}
+
+.top-illustrator {
+    color: #333;
+    font-size: 1.24rem;
+    text-align: center;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.top-endorsement {
+    color: #333;
+    font-size: 1.23rem;
+    line-height: 1.4;
+    padding: 60px 0 0 0;
+    text-align: center;
+}
+
+.top-endorsement-by {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 3px 0 30px 0;
+    text-align: center;
+}
+
+.top-title {
+    color: #333;
+    font-family: Open Serif, Times, serif;
+    font-size: 3.6rem;
+    text-align: center;
+    line-height: 0.4;
+    padding: 46px 0 6px 0;
+}
+
+.underline {
+    border-bottom: 1px solid #ccc;
+}
+
+/* https://css-tricks.com/snippets/css/media-queries-for-standard-devices */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    .show-tooltip {
+        display: block;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+    .show-tooltip {
+        display: block;
+    }
+}
+
+@-moz-document url-prefix() {
+    .fb-btn {
+        margin-top: -12px;
+    }
+}

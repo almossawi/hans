@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hans in the Land of Bards</title>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta property="og:title" content="Hans in the Land of Bards" />
+    <meta property="og:description" content="This is a story about an absentminded tailor and his
+        quick-witted accomplice who struggle to escape a land where things aren’t always what they seem.
+        During the journey, our protagonist is exposed to some fundamental concepts that are
+        ubiquitous in software, but whose usefulness extends beyond that field." />
+    <meta property="og:image" content="https://thelandofbards.com/images/cover.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://thelandofbards.com/" />
+    <meta property="og:site_name" content="Hans in the Land of Bards" />
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic' rel='stylesheet'>
+
+    <link href='https://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css' rel='stylesheet'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='css/metricsgraphics.css' rel='stylesheet'>
+    <link href='css/ekko-lightbox.css' rel='stylesheet'>
+    <link href='css/thelandofbards.css' rel='stylesheet'>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js' charset='utf-8'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js'></script>
+    <script src='js/ekko-lightbox.min.js'></script>
+    <script src='js/metricsgraphics.min.js'></script>
+    <script src='js/main.js'></script>
+</head>
+
+<body>
+    <div class='bottom-bar'>
+        <div class='bottom-bar-copy'>
+            <a href='#' class='no-underline go-to-top' title=
+            'Go to the top'><i class='fa fa-square-o'></i></a><a href='#support' class=
+            'no-underline go-to-support-section in-page' title=
+            'Join the mailing list to know when the upcoming parts are released!'><span class=
+            'bottom-hans'>Hans in the Land of Bards <span class=
+            'bottom-part-i-of-iii'>&nbsp;Part I of III</span></span></a>
+        </div>
+        <div class='bottom-bar-share'>
+            <a class='no-underline' href='
+            https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fthelandofbards.com&text=Hans%20In%20The%20Land%20of%20Bards%20by%20Ali%20Almossawi,&tw_p=tweetbutton&url=https%3A%2F%2Fthelandofbards.com&via=alialmossawi'><i class='
+            fa fa-twitter fa-fw bottom-bar-share-twitter-btn'></a></i><a class=
+            'no-underline fb-sharer' href=
+            '#'><i class=
+            'fa fa-facebook fa-fw bottom-bar-share-fb-btn'></a></i><a class=
+            'no-underline' href='https://github.com/almossawi/hans'><i class=
+            'fa fa-github fa-fw bottom-bar-share-github-btn'></i></a>
+        </div>
+    </div>
+
+    <div class='main-container'>
+        <p class='no-indent top-title'>Hans in the Land of Bards</p>
+        <p class='no-indent top-author'>Ali Almossawi</p>
+        <p class='no-indent top-illustrator'>Illustrated by Alejandro Giraldo</p>
+
+        <!--<div class='social-buttons text-center'>
+            <div class='social-btn twitter-btn'>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-via="alialmossawi" data-count="none" data-hashtags="thelandofbards">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+            <div class='social-btn fb-btn'>
+                <div class="fb-like" data-href="https://landofbards.com" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+            </div>
+        </div>-->
+
+        <div class='mommy-people-like-me'>
+            <p class='no-indent top-endorsement'>
+                <span class='serif'>&ldquo;</span>Imagine accidentally bumping into, and 
+                understanding, key computing concepts as you read through a wonderful 
+                adventure story. That is what you are about to do!<span class='serif'>&rdquo;</span>
+            </p>
+            <p class='no-indent top-endorsement-by'>&mdash;Mark Surman, Internet Activist, Executive Director<br />of the Mozilla Foundation</p>
+        </div>
+
+        <img class='cover-image' src='images/cover.png' alt='Hans in the Land of Bards by Ali Almossawi'>
+
+        <p class='no-indent authors-intro'>This is a story about an absentminded tailor and his quick-witted 
+        accomplice who struggle to escape a land where things aren’t always what they seem. During the journey, 
+        our protagonist is exposed to concepts that are ubiquitous in software, but whose usefulness extends beyond 
+        that field. Much as in life, the lessons come in the form of ‘head fakes,’ which means that our protagonist 
+        doesn’t realize at the time that he is learning anything of value. This work is dedicated  
+        <a href='http://creativecommons.org/licenses/by-nc/3.0/'>to the creative 
+        commons</a>. I hope you enjoy this opening part of the story.
+        <!-- &nbsp;<span class='authors-intro-signature'>&mdash;A.&nbsp;A.,&nbsp;San&nbsp;Francisco,&nbsp;March&nbsp;2015</i></span>-->
+
+        <div class='row'>
+            <div class='content col-xs-9'>
+                <div class='opening-padding'></div>
+
+                <p class='no-indent pic1-link'><span class='opening-letter'>T</span>hey say that one begins
+                to see dead relatives as one approaches the land of no return. So it was that Hans 
+                found himself fending off his deceased Aunt Jennifer’s projectiles with a shield that looked
+                suspiciously like a bin lid.</p>
+
+                <p>“All I want is one fish stick,” he pleaded, but much as
+                in his childhood, his mother’s sister&mdash;now grown to the size of the Gorton man’s
+                fishing boat&mdash;stood between him and the innocent pleasures of his favorite lunchtime
+                treat.</p>
+
+                <p>“Eat your vegetables!” she roared, as she lobbed another enormous brussels
+                sprout at his face.</p>
+
+                <p>This was no way to spend eternity. Restrained from eating his
+                food item of choice. With whatever energy was left in him, which mind you wasn’t all that much, 
+                Hans pried his eyes open and lifted his head. It was time to get moving.</p>
+
+                <p>The piscine mouth that had swallowed him whole only moments before had carried him
+                into the fish’s belly&mdash;a dark and humid cavern of a place, not too dissimilar to the
+                wretched hotel lobby where he had made the puffer fish’s acquaintance. To Hans’ cost, alas.</p>
+
+                <p>He was feeling distressed and figured that a two-day stay at the hotel on the hill would do 
+                him good. At the very least, it would lessen his anxiety. Poor Hans worried about a lot of things. 
+                But mostly, he worried about not having anything to worry about.</p>
+
+                <p>Hans shuffled along for several yards and then stepped out onto a soft patch of mud, freshly 
+                pounded by an overcast sky that was in the early stages of relieving itself.</p>
+
+                <p class='pic3-link'>It was a rainforest. And a vast one at that, with lanky trees 
+                for as far as the eye could see. A promiscuous breeze shook the leaves in front of him, before 
+                fraternizing with another bunch of leaves farther away.</p>
+
+                <p>“It can’t be done, mate. It simply can’t be done.”</p>
+
+                <p>A middle-aged man with a thick, black, almost Nietzsche-esque moustache, sat on
+                a rock, cheeks resting on the palms of his hands, eyes shut. His dark suit,
+                brownish homburg and matching leather briefcase lent him the appearance of a
+                businessman. And yet, the earplugs that he had placed firmly up his nostrils suggested 
+                that he was perhaps a few chips short of a fish dinner.</p>
+
+                <p>“Hello there,” Hans said. The man did not look up.</p>
+
+                <p>“Interested in buying life insurance? Figured not.”</p>
+
+                <p>“Excuse me, do you, well, do you, I mean, are you from around here, by any
+                chance? I’m trying to find my way back to the hotel and I’m kind of lost.”</p>
+
+                <p>“You and me both, mate.” He let out a deep breath.</p>
+
+                <p>“Is there no way out?”</p>
+
+                <p>“Way out? Out of where?”</p>
+
+                <p>“Here. Whatever this place is.”</p>
+
+                <p>The man opened his eyes and looked at Hans. He blew his nose in a super-smooth,
+                cavalier sort of way. The earplugs popped out onto to the ground.</p>
+
+                <p>“Why on Earth would you want to leave? This is where blokes like us make
+                bumloads of bangers and mash, what with all of those wild cats and birds here, none
+                of whom—” He looked around to make sure no one else was listening and then beckoned
+                for Hans to get closer. “None of whom have any life insurance. Don’t you see what an
+                opportunity this is?”</p>
+
+                <p>“Why do you need me? Why can’t you do it by yourself?”</p>
+
+                <p class='footnote1-link'>“Because Mickey McCoy here is old and slow. Listen up, I’m telling 
+                you, there are thousands of potential customers around here. If I could figure out how to get 
+                to all of them by sundown, I’d be swimming in cash, but I keep passing by the same old faces. I 
+                could really use that clever-looking nut of yours.”</p>
+
+                <p>“I’m terribly sorry. Mr. Rogers is stopping by on Wednesday to pick up his suit
+                and I’ve yet to finish it. Also, there’s this whole being-swallowed-by-a-fish
+                business that I need to figure out.”</p>
+
+                <p>“Off with the blinkers!”</p>
+
+                <p>Hans raised his eyebrows. “Blinkers?”</p>
+
+                <p>“There’s more to a race than the finish line, son. Think about that. Let it sink
+                in.” Hans scratched the back of his neck. “But seriously, now. I’ve got these two deaf badgers 
+                who need my Platinum Plan, only they don’t know it yet. You’re just the honest-looking bloke 
+                to convince them of it. What do you say?”</p>
+
+                <p>“I can’t, Mr. McCoy. I do alterations and pick fabrics for people. I don’t know
+                the first thing about selling life insurance plans.”</p>
+
+                <p>It was then that McCoy leapt onto Hans, moustache and all. A starving tiger lunging towards an 
+                unsuspecting antelope. He bodyslammed the hapless tailor onto the muddy Earth and held on tight. 
+                “Don’t leave me, son. Stray from the well-trodden path. We’ll be rich.”</p>
+
+                <p>“Let go of me this instant, you maniac!” Hans screamed as he wiggled his way out of
+                McCoy’s grasp. When Hans’ arms broke free, he grabbed the moustache before him from either end and
+                tugged on that abomination until McCoy’s eyes teared up and he let out a desperate
+                moan. Like a constipated seal about to be a hero.</p>
+
+                <p>“You monster!” He caressed his compromised facial hair.</p>
+
+                <p>Hans got up on his feet and scurried away. He ran as fast as he could through the trees,
+                for what seemed like miles, pumped by pure adrenaline. The excitement would have kept him going
+                were it not for a massive brick gate that finally obstructed him. Beyond it, he made
+                out what seemed like a beach town. Perhaps he could rest there for a bit before
+                making his way back to that damned&nbsp;hotel. But then again, perhaps not. The things that Hans 
+                desired were seldom within easy reach.</p>
+
+                <p>In front of the gate stood a man in uniform. Right next to him was a plaque,
+                etched into which were the words, IF CAPTAIN IS ABSENT, CAKE IS ON US. And right
+                under that was a single slice of red velvet cake.</p>
+
+                <p>“Ooh, it’s going to start burning soon,” the man said, pointing to the shower
+                cap on his head. “If it isn’t too much trouble, could you mark your name in this
+                book?”</p>
+
+                <p>He was a burly man with wide shoulders and a chest so large and flat that one
+                could easily cook a meal for four on it. His eyes, round and blood-soaked, were
+                twice the size of his head. His head was twice the size of his nose. His nose was
+                twice the size of his mouth.</p>
+
+                <p>“Chop chop. I don’t have all day. Name. Book. Now!” It was less a book and more
+                a collection of coffee-stained pages, barely held together with plastic tape. “I’d
+                do it myself if I could,” he continued. “Orders from above, alas.”</p>
+
+                <p>Hans opened the book to its first page and began scanning the entries one by one,
+                looking for his name. The letters, while mostly legible, were written in varying
+                sizes. The entries had no line breaks between them.</p>
+
+                <p>“I’m having a hard time reading these names,” Hans said. “Is there a reason why
+                they are written this way?”</p>
+
+                <p class='footnote2-link'>“Ooh, we only get the one pen and fifty-page pad a year, so we 
+                optimize for space. Letters that have a higher probability of occurring are written using 
+                less ink and are hence smaller in size.” The guard kept flicking his eyes from side to side, 
+                as if to check on that solitary slice of cake.</p>
+
+                <p>“Come on, now! I’ll need to wash this lye out of my hair pretty
+                quickly. I got me a date tonight, you see. And my good looks and that scrumptious dessert 
+                are my tickets to glory.”</p>
+
+                <p>“Adler, Aigner, Anderson,” Hans began reading in a soft voice.</p>
+
+                <p><i>Pop, pop, sizzle</i>. “Oh my, oh my,” the guard cried. A few puffs of smoke
+                emerged from underneath the shower cap.</p>
+
+                <p>“Andert, Andres, Antone,” Hans continued.</p>
+
+                <p><i>Sizzle, pop, sizzle</i>. “Oh no, oh no,” the guard whimpered. By now, fingernail 
+                shavings were darting out of the sides of his mouth and piercing the board behind him.</p>
+
+                <p>“Give me your last name, boy.”</p>
+
+                <p>“Nemec.”</p>
+
+                <p>The guard grabbed the book, slammed it shut and then flipped it open to its
+                middle. He gripped it with his massive hands and began to slowly tear the book in
+                half, down the spine, as satisfyingly as one might peel an aging, bumpy scab. As
+                his turnip of a head emerged from behind the parting pages, he had a look on his
+                face that commanded respect, and eyes that spoke to Hans. Eyes that whispered, ‘This
+                is how I roll.’ He put some plastic tape along the edges of one of the halves and
+                handed Hans the bundle.</p>
+
+                <p>“They are sorted alphabetically. By last name.”</p>
+
+                <p class='footnote3-link'>Hans took the now smaller book and flipped through its pages 
+                until he got to the Ns. Nemec, Nemec, Nemec. The squinting was doing his head in. It was 
+                then that he heard a tremendously loud pop and witnessed a spectacular phenomenon of nature. 
+                One that he had hitherto only heard of from travellers from far-away lands.</p>
+
+                <p>The guard’s entire head of hair stood up on all fours and flip-turned off the 
+                man’s scalp and onto the ground!</p>
+
+                <p>“My hair! My silky smooth hair, all gone! All gone because of you,
+                you snail of a man!”</p>
+
+                <p>“I’m terribly sorry, it’s just that I’m a bit slow on the uptake,” Hans said,
+                trying to salvage the situation. The emasculated man’s countenance turned grim.</p>
+
+                <p>“Men, take him away—” Two guards approached Hans and held onto
+                his arms. “And blast that Seth Rogen laugh track into his ears.”</p>
+
+                <p>The guards froze in&nbsp;place. “Captain, he is but a boy,” one of them protested, as he ever 
+                so slightly loosened his grip. “Solitary confinement is punishment enough.”</p>
+
+                <p>“Silence!” the captain replied, holding back his tears. “Let him suffer.” With
+                that, he buried his face in his hands and ran into the trees.</p>
+
+                <p>Hans turned to the velvet cake. “I suppose I can claim that slice now?” The guard to his left 
+                replied with a smack upside the head.</p>
+
+                <p>If Hans wanted to stand any chance of getting out of this place, he had to stop making grown 
+                men cry.</p>
+
+                <p></p>
+
+                <p class='no-indent'><span class='opening-letter'>J</span>oan’s disappearance was a tragedy 
+                for her pet Macau. For everyone else, it was a non-event. <!-- Joan had had the misfortune of 
+                achieving success at an early age, and was thus surrounded by --> Joan had had the misfortune of 
+                being surrounded by people who didn’t really like her, but were around her, all the same.</p>
+
+                <p>The wild currents made the journey seem like it would never end. At long last, the boat came to a 
+                halt on the sandy beach of an adjacent island. The guards climbed out of the boat and grabbed 
+                Hans by the lapels as he followed suit.</p>
+
+                <p>A voice, apparently from the heavens, shook every bone in Hans’ body.</p>
+
+                <p>“Oy! Who are you!”
+
+                <p>It seemed too colloquial a phrase to be transcendent, although the Dublin
+                accent was swinging it a bit.</p>
+
+                <p>Hans opened his eyes to the sight of a gigantic head looking straight at him. For Hans, 
+                there was nothing more terrifying than the thought, or in this case the sight,
+                of a gigantic head. His mother had informed him time and again, particularly
+                when she would find the need to summon her maternal weapon of choice, that the ginger-haired 
+                boy had been born a single gigantic head, with little arms and feet sticking out of it.</p>
+
+                <p>Occasional spices included the observation that it was a miracle that Hans was able to make it 
+                out of the birth canal without punching a hole through his mother’s bladder. Generally speaking, 
+                the amount of embellishment depended on the chore that was being asked of the young boy.</p>
+
+                <p>Hans backed away, trying to make sense of where he was. The head belonged to a red-haired 
+                woman in a beige dress. A woman whose eyes were as blue as the waves on which Hans had just 
+                voyaged, and whose face was adorned with a band of freckles from one ear to the other.</p>
+
+                <p>“Careful,” she said. “Don’t move too fast or you’ll fall off.” Hans looked down. He
+                was standing on the edge of what seemed to be a giant leaf.</p>
+
+                <p>“Where am I? The last thing I remember is being on a boat and coming into
+                shore.”</p>
+
+                <p>“Cave, guards, boat, then being shot out of a cannon into this place, right?
+                Yeah, been there. It was a while back. I woke up and found myself on top of this 
+                gigantic pitcher plant. I couldn’t think of a safe way to escape, so I stayed put, 
+                living off of beetles, flies and, on a good day, nectar that’s high enough to reach.”</p>
+
+                <p>“What’s a pitcher plant?”</p>
+
+                <p class='pic4-link'>“Come here, look. Look into that abyss. Do you see that purple juice?” 
+                Hans nodded. “That’s the belly of the beast. That cavity holds caustic liquid that the plant
+                uses to digest its prey. It lures unsuspecting insects by giving off a scent that
+                they recognize as yummy goodness. Once they get here, they’re only a slip away from
+                falling in, and then <i>adios</i>.”</p>
+
+                <p>“So for all this time you’ve been living on the edge of this dangerous plant?”</p>
+
+                <p>“Indeed I have. Escape is futile, what with the hard Earth beneath us and all
+                those other carnivorous plants salivating at the thought of gulping a morsel like
+                me whole. Not to mention that the giant <i>Powelliphantas</i>&mdash;deadly land snails to
+                you common folk&mdash;that live in and around this area are quite aggressive. And even if
+                I could jump onto that stem down there, I’d slip right off.”</p>
+
+                <p>“How did this one grow to be so big?”</p>
+
+                <p>“Beats me. By the way, my name is Joan,” she said as she offered Hans her
+                hand.</p>
+
+                <p>“It’s a pleasure. Hans. How did you end up here, Joan? Were you also swallowed by a 
+                puffer fish in a fedora?”</p>
+
+                <p>Joan put one hand on her forehead and pressed her eyes shut, as though calling to
+                mind the events of a long time past.</p>
+
+                <p>“Well, I was in the vicinity of water. That’s for sure. I had just necked two
+                pints of Ovaltine and so I excused myself and went into the restroom. I must have
+                passed out there. I was at the peak of my career, you know. Unstoppable, ambitious,
+                confident. Arrogant, actually. Pride goeth before destruction, as they say.</p>
+
+                <p>“We threw this lavish reception in our college’s atrium in honor of Dr. Lee who
+                had just donated three million dollars for a new state-of-the-art entomology lab. I
+                was there one minute, all dressed up, wafting between immaculately groomed guests.
+                Then here. I stormed out of that cave and walked right up to the guards and gave them 
+                an earful. As it turns out, they don’t take too kindly to candor.”</p>
+
+                <p>Hans bit his lips. “But there must be a way to get out. I do not suppose anyone would 
+                want to spend the rest of his life here. Trapped in a cage with death. Granted, 
+                it is pristine. But a cage, nonetheless.”</p>
+
+                <p>“True, things up here are a bit more discernible.” She twiddled her toes to
+                scare away a group of flies that were circling close by, then looked up.</p>
+
+                <p>“If you really want to escape, then there’s one way that might, that just might, work. 
+                There are these Asian hornets that stop by every morning. They take a nibble of anything 
+                that may be trapped in the liquid down below and fly off, with the plant none the wiser. 
+                They’re quite dangerous and have a sting that’ll make even the mightiest of people weep. 
+                The larger ones are usually less perceptive, though they are sedentary.</p>
+
+                <p class='pic4-zoom-link'>“So my idea is this. We find a way to lure one of those bigger hornets to the
+                plant, then once it has its nibble, you jump onto its backs and fly away to safety.
+                At the top of that mountain that’s shaped like a banker’s heart lives a popular man.
+                He will probably know how to get you off this island once and for all. Be wary of
+                his associate though, a man so cynical and whose words are so laden with subtext
+                that he has devolved into a sort of mandrill-like creature. He lives on maggots and
+                lice that he picks from his skin and endures a perpetual allergy to life. No fool
+                doth he suffer well!”</p>
+
+                <p>Looking towards the east at the mountain, Hans made out what seemed like, well,
+                what seemed like an eyeglass repair shop. “Is that a shop up there?”</p>
+
+                <p>“Indeed it is. That’s where the supposedly great man lives.”</p>
+
+                <p>The conversation had uplifted Hans’ spirits and lowered his guard. Emboldened, 
+                he proceeded in an uncharacteristic manner. He was in uncharted territory. He had broken
+                new ground and anything could happen.</p>
+
+                <p>“Why does he live in an eyeglass repair shop? I suppose&mdash;“ Hans cleared his throat and 
+                straightened his back. “I suppose it’s to blend in with the other shops in the area.” Hans 
+                waited, but Joan did not laugh. He then waited some more. “Tell me, Joan, what makes him a great 
+                man?”</p>
+
+                <p>“They say it’s because he is a thinker.”</p>
+
+                <p>“A thinker, you say. Well—umm—what exactly does he do?”</p>
+
+                <p>“He thinks, silly. Personally, I’m doubtful of that sort of thing. I don’t believe there are 
+                any experts in life. Just people with different levels of self-doubt.”</p>
+
+                <p>“How do you suppose we’d be able to get one of those bigger hornets to approach
+                the plant?”</p>
+
+                <p>“By making the plant give off a stronger than usual scent. The word on the vine is 
+                that the strength of the scent is a function of the vapidness of the feast on offer.”</p>
+
+                <p>“I guess the other question is how do we get the plant to eat something that
+                would give off that kind of scent?” Hans held his breath as he saw in Joan’s eyes what
+                it was she was contemplating. “Joan, you hardly know me.”</p>
+
+                <p>“Someone enters your life passingly and does something unexpected and you wonder
+                what would have become of you were it not for them. We’re all dead men and women,
+                Hans. Life is ephemeral. I’d rather run after death and grab it by the neck than
+                surrender to it in old age.</p>
+
+                <p>“The hornets fly back home to the east after breakfast. Once you get to the
+                river with the giant lilies, jump onto them. They will cushion your fall. From
+                there, make your way to the mountain on the other side of the forest, then up to
+                the Thinker’s shop.</p>
+
+                <p>“The forest is full of deadly predators that come out at night looking for warm bodies 
+                to stuff their bellies with. I can’t be certain of these details, but I have it on good 
+                authority that they’re accurate. Those fireflies sure love to kick back and gossip every night.”</p>
+
+                <p>As kind as the offer was, Hans couldn’t accept it. “I’m terribly sorry,
+                Joan, but your idea seems a tad too extreme. How could I possibly live with
+                myself?”</p>
+
+                <p>“Yeah, I suppose you’re right.”</p>
+
+                <p class='footnote4-link'>“Listen, I brought along this book that I picked up at the train 
+                station. It’s about a symbologist trying to crack some code. This <i>ought</i> to have the
+                desired effect.”</p>
+
+                <p>Joan looked at the cover and pursed her lips. “Yeah, a few pages of that ought to 
+                do the job.”</p>
+
+                <p>“Let’s leave together,” Hans pleaded. “It will be an adventure.”</p>
+
+                <p>“Oh, don’t worry about me. You’ll make it if you believe in yourself.
+                Don’t be drawn into the myth of your own inadequacy.”</p>
+
+                <p>“I don’t want to just make it,” Hans replied, faintly.</p>
+
+                <p>“Oh, very well then,” she said a few moments later. “You soft-hearted fool! We make 
+                our move tomorrow morning!”</p>
+
+                <p>Hans couldn’t make sense of what seemed like Joan’s conflicting set of ideals. It
+                was as though he had caught her amidst a transition from one mindset to another,
+                during which liminal period, internal misalignments take on the appearance 
+                of&nbsp;contradictions.</p>
+
+                <p></p>
+
+                <p class='no-indent'><span class='opening-letter'>A</span>s the hornet buzzed towards 
+                the east, Hans held onto its furry back, tight as he could, looking down at a spectacular 
+                view. A carpet of lush, green trees covered most of the island. There was a large hill 
+                to the west with half a dozen wild cats resting on its peak. Right below that, a silky 
+                white beach stretched between the foothills and the sparkling turquoise water. One of 
+                the cats lay on the grass, belly up, not a care in the world. Like a capsized Budai, 
+                modulo the smile of course. And the contentment, one might suppose. And the affection, one 
+                might&nbsp;imagine.</p>
+
+                <p>“Look, over there.” Joan tapped Hans on the shoulder and pointed straight ahead.
+                “That’s the river with the lilies. On three now. One-two-jump!”</p>
+
+                <p>Hans flapped his arms like a scared chicken and filled the heavens with frantic sounds 
+                of flipping, turning, shouting and screaming. He hit one of the lilies with a thud and let 
+                out a formidable fart. As that civilization of methane escaped into the ether, the tailor was 
+                comforted by the thought of vicarious freedom. He was peculiar like that.</p>
+
+                <p>Joan scrambled onto the riverbank. Hans followed suit.</p>
+
+                <p>“Well, this is it,” she said.</p>
+
+                <p>Hans glanced up and around. To the east, the mountain rose up against the sky. His
+                visceral thought was to go with the simplest strategy, which was to walk towards
+                the mountain in as straight a line as possible. There was no time to waste. Joan
+                agreed, and the two entered the maze of trees.</p>
+
+                <p>“Hey, look at this,” she said. Nailed to the tree in front of them was what appeared to 
+                be a map. Joan tore off the aging piece of cloth with one hand and inspected it.</p>
+
+                <p>“Time for Plan B, Hans.” The map was littered with spots labeled DANGEROUS
+                and STAY AWAY along with drawings of skulls, crossbones and former vice presidents.
+                “We’re not going to want to risk going anywhere near those places.”</p>
+
+                <p>“Oh no, we’re going to be supper for a herd of hungry wild cats,” Hans said. “There
+                are so many possible combinations, with numerous forks along several of those
+                paths. We’re&nbsp;doomed.”</p>
+
+                <p>“Will you get a grip? How did you make it this far in life with that kind of
+                attitude? Now look here. The larger trees are connected with dotted lines and
+                along each dotted line is a number, in minutes. The only problem is that longer
+                paths don’t always take longer to traverse. In fact—see this—the longest path
+                reportedly takes the shortest amount of time to cross.” She pointed to the
+                footnote.</p>
+
+                <p>“Lions graze here, traveller—run,” Hans read.</p>
+
+                <p>“That wrinkle will likely make it difficult for us to visually determine the
+                shortest path.”</p>
+
+                <p class='footnote5-link'>“Perhaps if we always take the shortest path from each tree to 
+                the next. That seems reasonable enough, don’t you think?”</p>
+
+                <p>“Well, let’s see, that would take—umm—around eight hours.” She looked up at the
+                sky. “It’s around noon now. The sun sets at half-past-six. Eight hours is too
+                long.”</p>
+
+                <p>Drops of sweat trickled down Hans’ forehead. He sat down on the ground and cradled 
+                his head in his sweaty palms.</p>
+
+                <p>“We’re finished!” He closed his eyes to the near-immediate sight of Aunt
+                Jennifer. This time she was holding onto a rolling pin and slowly tapping the tip
+                of her shoulder with it. For someone named after the patron saint of disasters, Aunt 
+                Jennifer had the uncanny ability to show up at disasters and make them worse.</p>
+
+                <p>Hans stood up, his eyes still shut. “I will not perish!” he screamed, pointing towards 
+                the sky and whatever lay beyond it. “I will make it out of here. If it’s the last thing 
+                I ever—”</p>
+
+                <p><i>Bam!</i></p>
+
+                <p>Something hit that faint-hearted traveller right on the side of his head, then fell 
+                and cracked open near his feet. His vision swam and vertigo overcame him.</p>
+
+                <p>“What on Earth was that?” he said, with one hand on his forehead, and the other 
+                holding onto his glasses. And then he heard tutting. Could it be? Was he in London?</p>
+
+                <p class='pic5-link'>As Hans’ eyesight refocused, he looked up and saw a group of onlookers dressed 
+                only in white briefs, perched on a branch. They hefted coconuts and rolled their eyes. The sole human 
+                among them was wrapped in a sunburnt cloak of oily skin. His shiny bald head made him appear 
+                like a celestial figure&mdash;an image slightly dampened by the lightly smeared white briefs.</p>
+
+                <p>“Who are you?” Hans shouted.</p>
+
+                <p>“A cenobite from the Singuado monastery. We are all cenobites. We took an oath of 
+                silence seventy suppers ago to trounce our persistent dependence on tutting. Your sobbing
+                distressed us so much that we snapped. Oh, how I’ve missed it. I’ve got so much
+                tutting to catch up on.”</p>
+
+                <p>Joan chuckled. “That’s just what you needed, Hans. A coconut to the head to shut
+                you up.” It was the very first time that Hans had seen Joan smile.</p>
+
+                <p>He had an interesting idiolect, that old tutter on the tree. A lisp, of sorts,
+                most probably caused by the way his lips were perched up and to one side, as though
+                they were an autonomous being about to lift off and embark on a flight into the
+                heavens. With every <i>thilenthe</i> and <i>thnapped</i>, Hans was treated to an
+                onslaught of warm, viscous saliva. Fearless kamikaze globules that darted towards
+                his face, their hearts atop their armor.</p>
+
+                <p>“Hey, you. Captain Underwear,” Joan said. “You must have a good view from up
+                there. We’re trying to get to that mountain before sunset.” Her statement led to an
+                outbreak of tutting amongst the tutters’ ranks.</p>
+
+                <p>“A simple person you must be to ask such a simple question. Is it not self-evident
+                what the quickest route is?”</p>
+
+                <p>“Now look here, friend, don’t you get all smart with me&mdash;”</p>
+
+                <p>“Your friend?” he interrupted. “Me, virtuous and scholarly, a friend of a 
+                feckless&nbsp;cretin?”</p>
+
+                <p>“That explains why you’re missing the tip of your nose then.” Joan curtsied and
+                wobbled her head in a silly way, before adding, “Your Grace.”</p>
+
+                <p>“That was uncalled for. I lost my nose many years ago. It was calamitous,” the
+                Tutter&nbsp;countered. “I was being chased by several assassins when they struck. It was 
+                cataclysmically catastrophic.”</p>
+
+                <p>Upon closer inspection, both Hans and Joan realized that the man was indeed missing a 
+                large chunk of his nose. Now, less animated, he said, “Here, take a look at this. Whenever you
+                are stuck on a problem in life, it is not a bad idea to inspect the corpus of human
+                knowledge. There is a good chance that other people have encountered the same
+                roadblock before and managed to overcome it.”</p>
+
+                <p class='footnote6-link'>The Tutter dropped a stapled collection of papers towards Hans. It 
+                floated down and landed on the ground, immediately soaking up its dampness like a sponge. Hans 
+                picked up the stack and paged through it. An academic paper, whose content was
+                mercifully shorter than its title.</p>
+
+                <p>Recalling his recent encounter with the guard, Hans made sure not to make assumptions. 
+                A wrong assumption now could mean death or worse&mdash;being stuck with the&nbsp;tutters.</p>
+
+                <p>“Excuse me, the method outlined in here, will it get us to the mountain before&nbsp;sunset?”</p>
+
+                <p>“Yes, perhaps.”</p>
+
+                <p>Hans handed the short document to Joan, but she insisted that he go through it and
+                report back. She said she had to get a few things. Hans took the time to go through
+                the short document and saw that its suggestion was an improvement over his original
+                solution.</p>
+
+                <p>He had been blinding himself from potentially better paths by always
+                assuming that a shorter path in the beginning implied a shorter overall one, which
+                of course isn’t always the case.</p>
+
+                <p class='footnote7-link'>Using this new method, he would start at the first tree and look at 
+                all of the possible paths to neighboring trees and make a note of the time that it took to get to each 
+                one. He would then, in turn, do that for each of those neighboring trees, starting with the ones 
+                that he could get to the quickest, and so on until he covered the entire set of trees. If it was his 
+                first time crossing a tree or if a previous visit had resulted in a longer recorded time, he would 
+                scratch out the old time and make note of the newer, shorter time.</p>
+
+                <p>The suggested route to the mountain would get them there in six hours.</p>
+
+                <p>Satisfied with the now higher likelihood of making it through the forest before
+                sundown, Hans folded the paper and slid it into his back pocket. He waved to Joan. She
+                was a few yards away behind some bushes. “Hey, Joan. I think we got our Plan&nbsp;B.”</p>
+
+                <p>She walked back, carrying what seemed like a bunch of rocks and leaves.</p>
+
+                <p>“What’s that?” he asked.</p>
+
+                <p>“Preemption. I’m going to have to fix up my dress, in case we have to leg
+                it!”</p>
+
+                <p>“Well, you’re in luck,” Hans replied, with a smile. “That’s the one thing I’m
+                quite good at.”</p>
+
+                <p></p>
+
+                <p class='no-indent pic6-link'><span class='opening-letter'>H</span>ans pushed the door to the 
+                eyeglass repair shop open until the hinges creaked. There before him was the cynic he 
+                had been forewarned of. That ghastly creature who knew the price of everything and the 
+                value of nothing. He sat on the floor, stony-faced, against a dusty wall. One would have 
+                thought that the sight of a physically drained man drenched in sweat, gasping for breath, 
+                would evoke a more hospitable welcome.</p>
+
+                <p>Hans felt Joan’s elbow poking him in the ribs. He took a step forward.</p>
+
+                <p>It would perhaps not be uncharitable to say that the Mandrill had a unique face. His eyes 
+                were droopy, but only just, as though his eyelids had decided to drop, then discovered that 
+                it would be too taxing a task. His mouth, no less perplexing, appeared to be frowning,
+                smiling and mocking, all at the same time. The ensuing sneer was so patience-testing that one 
+                wouldn’t have been surprised if it turned out that the Mandrill was actually a presenter on a 
+                fair-and-balanced news&nbsp;channel.</p>
+
+                <p>“I suppose you’re here for the Wi-Fi?” he said, sniffing.</p>
+
+                <p>“Wi-Fi? Umm—no, we’re here to see the Thinker,” Hans replied, assuming the body
+                language of a man of moderate self-confidence.</p>
+
+                <p>Joan had run out of patience. “We’ve travelled all day through the forest,
+                racing against a setting sun and evading wild predators and booby traps. We’ve
+                walked up hundreds of flights of stairs, risking our lives with every step. Lead us
+                to him at once,&nbsp;Mandrill!”</p>
+
+                <p>The Mandrill looked at Joan without saying a word. His hands were clasped
+                together in his lap. Every couple of seconds, he would twirl his thumbs about each
+                other. After what seemed like the better part of a minute had passed, he opened his
+                mouth.</p>
+
+                <p>“Why do you want to see the Thinker? So you can take a selfie with him and
+                exchange it for Facebook <i>likes</i> and Internet <i>karma</i>? I know your type. The Thinker
+                doesn’t have time to socialize with visitors. The little free time he does have, he
+                prefers to spend it in the company of smart people, a list of whom I have here.” He
+                pointed to a pile of papers that rested against the wall beside him.</p>
+
+                <p class='footnote8-link'>“Umm&mdash;is there any way you might be able to add us to 
+                that list?” Hans asked.</p>
+
+                <p>The Mandrill turned his gaze to Hans. Without raising his right hand, he pointed to 
+                the adjacent wall. “Have a seat.” Hans walked to the wall and sat down, as did Joan.</p>
+
+                <p>He poured Hans a glass of a shiny red liquid. “Have a sip of this artisanal
+                Kool-Aid. It will calm your nerves.” Hans did just that, and as though by magic, he was 
+                overcome with the pressing desire to create a mobile app. He didn’t even know what a mobile
+                app was.</p>
+
+                <p>“Let me introduce myself,” the Mandrill said. “My name is Kolon. Dr. Blok D. Kolon.” He 
+                raised his hands as a magician would after a particularly clever trick. “I run this
+                place. Don’t be fooled by the corridors paved with slime and the flaky walls. We do
+                a lot of valuable research and development here. We’re in stealth mode at the moment. Hence 
+                the disguised exterior.”</p>
+
+                <p>Joan sighed and undid her hair.</p>
+
+                <p>The Mandrill continued. “This is an intellectually sterile environment, so we want to be 
+                careful who we let in. Your general appearance tells me that you’re probably not cut out for this
+                place. How about you come back in a few years time when you’re more experienced?”</p>
+
+                <p>“What exactly would I want to become more experienced in?” Hans said.</p>
+
+                <p>“A priori knowledge of&mdash;things.”</p>
+
+                <p>“Things? What things in particular?”</p>
+
+                <p>“All the things.”</p>
+
+                <p>“That’s well and good,” Hans said. “But we really need to see the Thinker, and
+                pretty soon. I’m not too sure that we can afford to wait for a few years.” He
+                glanced at Joan. “Can you do anything?” he mouthed to her. She shrugged.</p>
+                
+                <p>“Let’s get out of here, Hans.”</p>
+
+                <p>Hans looked at Kolon. “Just so you know, the thought of taking a selfie with the Thinker 
+                did cross my mind.” Joan turned the knob and walked out.</p>
+
+                <p>“Wait,” Kolon said, as Hans was about to close the door behind him. Hans popped
+                his head back into the shop. “There’s a campsite at the bottom of this rock.
+                Every now and then, I see smoke billowing from there. Just saying.”</p>
+
+                <p>“Hey Joan, I found us a place to rest tonight. Apparently, there’s a campsite at
+                the bottom.”</p>
+
+                <p>“Sounds like a plan, Hans. But first, come and have a seat. Let’s soak this
+                in.”</p>
+
+                <p>Hans and Joan sat at the edge of the mountain and looked at the majestic view before 
+                them. At that glorious orange disc in the sky, edging its way towards the horizon. The
+                heavens were calm. Quiet. Serene.</p>
+
+                <p></p>
+
+                <p class='no-indent'><span class='opening-letter'>B</span>y the time Hans and Joan reached 
+                the mountain’s foot, the sun had all but set. As night fell, the two travellers became engulfed 
+                in pitch darkness, yet they walked. No sooner had Hans entangled himself in a bad analogy about 
+                a fetus in a womb than he heard sniffing and scratching. He proceeded slowly until his view was 
+                unobstructed. It was a dog. A fox terrier in fact.</p>
+
+                <p>“Shoo,” he whispered to the the fluffy white animal as he flicked his hands at him.
+                The dog just stood there, looking at Hans, eyebrows raised.</p>
+
+                <p>“Leave him alone.” Joan walked up to the dog and scratched him behind the
+                ears. Hans approached. The dog leapt out of Joan’s arms and ran into the trees.</p>
+
+                <p>“I guess he doesn’t like you,” Joan said. She picked up a dusty bone from the
+                ground, one that the terrier was likely munching on, and threw it towards the trees. The terrier 
+                darted out from behind the bushes, scooped up the bone with his tongue and then dashed back. 
+                Hans walked towards a nook in the mountain and rested against the smooth slab of rock. Joan was 
+                moving about, gathering things. Smelling
+                and tasting them.</p>
+
+                <p>“What are you doing?”</p>
+
+                <p>“If we want to stay warm tonight, and fend off unwelcome guests, we’ll need to
+                light a fire.”</p>
+
+                <p>Hans crossed his hands behind his head. In the darkness, he could just about make out where 
+                the terrier was hiding. He took out a chocolate bar from his jacket and broke off a small piece.</p>
+
+                <p>“Here, doggy,” he said as he threw the block of chocolate towards the trees. The dog didn’t 
+                wait long, jumping as he did towards the piece and gulping it down whole. He took a step
+                forward and then began a cervine walk towards Hans, stopping every so often and
+                looking around. When he was close enough, Hans broke off another piece of chocolate and
+                placed it in the dog’s mouth.</p>
+
+                <p>“I see you’re friends now,” Joan said. She was rubbing two twigs against each other and 
+                blowing into a recess that she had made in the ground.</p>
+
+                <p>“Indeed. Little, umm&mdash;Pavlov, yes, that’s what I’ll call him. Pavlov here sure
+                likes chocolate.”</p>
+
+                <p>“You gave chocolate to a dog? Get it out of his belly right away! For heaven’s
+                sake. Who gives chocolate to a dog!”</p>
+
+                <p class='footnote9-link'>Hans remembered that during a particularly lonely summer’s day, 
+                back when he was a schoolboy, he had commissioned a neighbor to tickle him for so long that 
+                the activity had led to immediate bowel action. That ought to work.</p>
+
+                <p>He grabbed the poor soul and positioned him on his back. The dog looked into Hans’ eyes 
+                as he descended on the innocent chap. <i>Tickle, tickle, tickle, tickle</i>. The dog raised one 
+                eyebrow and lowered the other. As though to say, &lsquo;Human, what on Earth is wrong with you?&rsquo;</p>
+
+                <p>Joan had by now started the fire and was cozying up to it. Hans continued his noble pursuit. 
+                Ten minutes must have passed and then, without a perfunctory warning of any kind, the
+                terrier let out a loud burp and unleashed a pint of warm belly juice into Hans’ face.</p>
+
+                <p>“Argh! It burns!”</p>
+
+                <p>Hans fell to the ground and rolled around until the stickiness of the smelly vomit
+                had been replaced with the choking powdery feel of dust. He opened his eyes not to
+                the sight of his comrade, holding his head in her lap, wiping his forehead with a warm
+                towel, giving him words of encouragement&mdash;Hans watched a lot of soap operas, you 
+                see&mdash;but rather, to said comrade looking intently at a piece of laminated paper.</p>
+
+                <p>“What’s that?” he asked, wiping off the dust and dirt from his clothes and sitting up.</p>
+
+                <p>“It came out of the dog. It seems like it’s, well&mdash;it seems like it’s a business 
+                card.”</p>
+
+                <p>“What does it say?”</p>
+
+                <p>“Walter Jones, NSA Agent.”</p>
+
+                <p>“NSA? Nordic Scrabble Association?”</p>
+
+                <p>“No, Hans. National Security Agency. You know, monitoring, counterintelligence,
+                enhanced interrogation techniques. That sort of thing.”</p>
+
+                <p>“Oh. Oh, I see. Why would an NSA agent be in a place like this?”</p>
+
+                <p>“More importantly, why did your friend here swallow his business card?” Joan
+                looked at the puddle on the ground. She bent down and picked up a round object.</p>
+
+                <p>“Whoa. Is that a button?” Joan nodded.</p>
+
+                <p>“Pavlov, where did you find this?” The dog barked and ran towards the trees,
+                wagging his tail. He turned his head and saw that his human friends hadn’t moved. He 
+                barked again.</p>
+
+                <p>“There’s no way we’re leaving now,” Joan said. “It’s too dangerous. Let’s get
+                some rest and make our move in the morning.” Hans pantomimed the plan to Pavlov.</p>
+
+                <p>The dog walked back to the nook with Hans and cuddled up beside him. Joan slept a 
+                few feet away. It wasn’t too long before everyone dozed off. For it had been a long day.</p>
+
+                <p></p>
+
+                <p class='no-indent'><span class='opening-letter'>T</span>he next morning, Hans, Joan and 
+                Pavlov ventured into the trees until they encountered a jumbled pile of mismatched apparel. 
+                Beige corduroy trousers and a blue jacket. How terribly transatlantic. The corpse underneath was
+                of course equally disturbing. A yard or so away lay a coconut covered in gunk. Joan approached 
+                the spot, treading ever so lightly.</p>
+
+                <p>“It’s&mdash;a man,” she said. “A man in a suit.”</p>
+
+                <p>“Is he dead?”</p>
+
+                <p>“Well, he is missing half his torso. I mean there is that. But otherwise he’s in
+                pretty good shape.”</p>
+
+                <p>“Oh. So he’s dead then?”</p>
+
+                <p>“Ha! You’re not going to believe this, Hans. Look.”</p>
+
+                <p>Hans examined the slip of paper that Joan had in her hand. “Hey, it’s a picture of that 
+                blocked colon guy!” he said. “A selfie with the Mandrill. Well, what do you know.”</p>
+
+                <p>“Whatever this guy’s connection to the Mandrill is, I bet you he’s on his list.”
+                Joan’s eyes grew wider.</p>
+
+                <p>“Are you thinking what I’m thinking?” Hans took a moment to compose himself.</p>
+
+                <p>“I’ll be honest with you, Joan. Somehow I doubt it.”</p>
+
+                <p>“You become Walter Jones,” she said, elongating every syllable of the
+                decomposing man’s name.</p>
+
+                <p>Hans scratched his head. “You mean in spirit?”</p>
+
+                <p>“No. I mean you put on his jacket and shades and you go to the Mandrill pretending to be 
+                Walter Jones. It’s worth a shot. Pavlov and I will wait for you at the campsite. How about that?”</p>
+
+                <p>“Sounds like a plan.” Joan handed Hans the slip of paper.</p>
+
+                <p>“Come on, Pavlov. Reconnaissance time.”</p>
+
+                <p>Hans took off his jacket and slipped into Walter Jones’ jacket. He then popped on the shades. 
+                When they all reached the campsite, Joan wished him luck and they went their separate ways.</p>
+
+                <p class='footnote10-link'>Hoodwinking the Mandrill was a quick affair. He looked up briefly, 
+                figured that his visitor was actually Walter, and then allowed Hans to go through to the back. Hans 
+                walked under the arch of Detoxia&mdash;named after the Greek god of charlatanism&mdash;through the 
+                corridor of Halitosis&mdash;named after the Greek god of indigestion&mdash;and finally reached the 
+                wall of Moostafa, which had been christened so for ironic reasons.</p>
+
+                <p>“The code is still the same,” the Mandrill shouted from across the corridor. “86-75-30-9.” 
+                The Mandrill happened to be enchanted with prime numbers and obscure pop culture references.</p>
+                
+                <p>There in the back, sitting flush with the wall was a large  door with a combination lock and 
+                lever guarding it. Hans dialed the combination lock. It clicked. He took a deep breath and 
+                straightened his back. He would have to go in poised, self-assured, dignified.</p>
+
+                <p>He pulled the lever and unleashed a puff of clammy air that smacked him square in the 
+                face. It fogged up his glasses. As the moisture on Hans’ second pair of eyes slowly receded, 
+                he saw that three rows of steel pipes obstructed the top of the entrance. He held onto the wall 
+                for support and lowered his head. Crawling might have been the better option. It’s just that, in 
+                Hans’ experience, there appeared to be an inverse relationship between how close his face was to 
+                the ground and the favorability with which others perceived him.</p>
+
+                <p>He was inside. When he got to the end of the entrance, he raised his head, and lo and 
+                behold, there actually was a human being there. The magnificent Thinker whom he had heard so much about. 
+                The person whom he had been searching for. Encased, embalmed you might say, inside that tiny
+                steel room. That gamy room.</p>
+
+                <p>The Thinker was sitting on a wide chair, arms extended along the armrests, His eyes fixed 
+                on the wall straight ahead, as though the whole weight of the universe rested on His shoulders.</p>
+
+                <p class='pic8-link'>The Thinker was a thin, pasty man with a full head of grey hair. He had thick, bushy eyebrows and 
+                a pair of heavy eyes. He wore a brown suit, a brown waistcoat and a brown bowtie. To Hans, it was a 
+                splendid sight. The Thinker looked perfect in every sense of the word. Divine.</p>
+
+                <p>“It’s an honor to finally meet you. I was told that you, of all people, would be able to give me 
+                direction and guidance.”</p>
+
+                <p>Hans sensed that the man was about to open his mouth, so he lowered his 
+                gaze. Nothing happened. Hans looked up and saw that the man was still thinking. He lowered his gaze 
+                again. Again, nothing happened. Hans fidgeted a bit then looked up at the man once more. Could it be that 
+                this beautiful creature was, quite literally, a thinker, in that He wasn’t capable of doing anything 
+                other than thinking?</p>
+
+                <p>“Umm, sorry to bother you, but are you able to hear the words that are coming out of my mouth?” 
+                Nothing.</p>
+
+                <p>“Would you mind nodding if you can hear me?” Nothing.</p>
+
+                <p>“If you can can see me?” Nothing. Hans took out the piece of paper that had the photo of Walter 
+                and the Mandrill on it and held it up to him.</p>
+
+                <p>“Look, this is me. It’s ok. I’m intelligent.” Nothing.</p>
+
+                <p>So it was then. Hans had finally found the one person whom he had thought could help
+                him, only to be disappointed. The Thinker was a being so absolute that, in actuality,
+                He had no practical value. A corpse covered in honey.</p>
+
+                <p>Hans walked out, Joseph Merrick-style, as before, and stood there, unsure of how to
+                proceed. He was just about to put the photo back in his jacket pocket when he noticed
+                something. The moisture in the room had weakened the paper causing the corners to 
+                curve outward. It was in fact two pieces of paper stuck together. Hans peeled the sheets apart. 
+                The one concealed underneath the photo was blank, except for a small red cross in one corner. 
+                How odd. He folded both papers and put them back in his pocket.</p>
+
+                <p></p>
+
+                <p class='no-indent'><span class='opening-letter'>S</span>ave for a torn piece of Joan’s dress, 
+                Hans’ two companions were nowhere to be seen. He was back at the campsite.</p>
+
+                <p>“Joan, Pavlov, where are you?” Hans was on the verge of panicking, and so, like a protagonist 
+                in a Hollywood war movie, he ran into the trees, screaming at the enemy and waving his 
+                hands around. To his disappointment, the laws of nature did not bend in his favor.</p>
+
+                <p>The unguided walk through the trees was proving to no avail. Hans’ comrades were nowhere to 
+                be seen.</p>
+
+                <p>“Joan, can you hear me? Jo&mdash;” <i>Tick</i>, and then <i>wham!</i> He felt a loop of
+                rope tighten around his right ankle and then propel him upward. Hans suddenly found 
+                himself inside a sack of thick ropes, suspended in midair.</p>
+
+                <p>“Oh no, help! Somebody, help!” he screamed. This was bad. This was really bad.
+                There was no way things could get any worse.</p>
+
+                <p>It wasn’t long before Hans heard the sound of something moving between the bushes.
+                He froze in place and did his best to put a cap on his heavy breathing. Was He being
+                hunted?</p>
+
+                <p>It was then that it jumped out from among the trees. Homburg, briefcase and
+                all. He saw Hans right away. “Well, well, well. If it isn’t my old pal.”</p>
+
+                <p>Hans let out a groan as the thought of being hurt by this most capricous of beings 
+                crossed his mind. “I’ll do anything you want, Mr. McCoy. I’ll help you sell insurance
+                plans if that will make you happy. Please don’t hurt me.”</p>
+
+                <p>“I don’t know what you’ve been drinking, son. I’d never hurt you.” He took off his 
+                homburg and sat down on a nearby rock.</p>
+
+                <p>“I get it. People have different priorities.” McCoy took a handkerchief out of 
+                his homburg, wiped his forehead with it, and then put both the handkerchief and the homburg 
+                on his head again.</p>
+                
+                <p>“Most people get older and they start losing their drive, son. I never did. But I was 
+                never too smart to begin with, you see. Still, I like to think of myself as a land not yet 
+                plowed. It’s the only way not to abandon hope, you know. I don’t want to be like my old man. 
+                A plasterer by day. A janitor by night. Forgotten in death. The poor sod.”</p>
+
+                <p>Hans fidgeted a bit amidst the ropes. “Mr. McCoy, I thought you weren’t good at 
+                navigating the forest. You seem to have made it really far.”</p>
+
+                <p>“Luck, son. If you asked me to get here again tomorrow, I wouldn’t have the
+                faintest idea. By the way, I’m a bit strapped for cash. Any chance you could lend
+                me a few quid?”</p>
+
+                <p>Hans dug into his pockets and found a solitary coin. “This is all I have.”</p>
+
+                <p>“That makes you the most generous man in the world. It’ll come around,” he said
+                with a wink.</p>
+
+                <p>“You know what? I bumped into someone a short while after our first encounter,
+                and he taught me a really smart way of moving through the forest. Let me tell you
+                how it’s done. Better yet, let me give you something to read and you can learn
+                about it yourself.”</p>
+
+                <p>“Oh I’m too old to read. Why don’t you just tell me how it’s done?”</p>
+
+                <p>“No, I insist. It’s not that hard, and you’ll be grateful that you did. Thinking for
+                yourself forces you to dispel assumptions that you might have otherwise taken as
+                read. Trust me, I speak from experience.” Hans took out the paper that the Tutter 
+                had given him and waved it at McCoy.</p>
+
+                <p>“Oh, where are my manners. Let me get you down.”</p>
+
+                <p>Once Hans was on the ground, he handed his savior the paper and the map. McCoy opened 
+                his briefcase and took out a camera.</p>
+
+                <p>“I’ll take that clever talk, but not the map. You might need it yourself. Let me
+                snap a photo of it.”</p>
+
+                <p>And that’s when it hit Hans. A pesky fly. And then it hit him. Why of course. He
+                took out the piece of paper that he had discovered right after he came out of the
+                Thinker’s room and placed it on top of the map. Through the semi-opaque fiber, he
+                noticed that the red cross lay almost exactly on top of the skull and crossbones of
+                the map below. How peculiar. What if the predators in the forest were as artificial
+                as the Thinker’s abilities? Hans felt his heart rate spike. He said his goodbyes to 
+                McCoy and headed out.</p>
+
+                <p>When Hans reached the marked spot, it didn’t seem like there was anything or anyone
+                of interest there. But then he noticed, to one side, a convex structure protruding from 
+                the ground. Initially, he had thought it a collapsed tree bark, but as he got closer, he saw 
+                that it was in fact a hatch. A hatch covered in a mesh made of dry leaves. He pulled one
+                end of the mesh and threw it to one side.</p>
+
+                <p>With all the strength that he could muster, he imparted a mighty impulse on the ledge 
+                and slowly but surely the door gave way. Hans walked down the steps and found himself in a 
+                tiny room no larger than his own tailor shop. A most unassuming room it was.</p>
+
+                <p>In front of Hans was a wooden desk behind which sat a small, grey-haired man in a
+                black jacket. He was so utterly and totally consumed with whatever it is that he was doing, 
+                muttering things to himself and writing in a notebook, that he did not notice his guest. 
+                Hans volunteered to break the awkwardness.</p>
+
+                <p>“Umm&mdash;I don’t mean to be too forward, but&mdash;”</p>
+
+                <p>“Argh!” the man gasped. He took out a long steel rod and pointed it in Hans’
+                general direction. “Freeze. Not one step or I will end you. Who are you? Are you
+                with them?” It was then that Hans realized that he still had Walter Jones’ jacket 
+                on.</p>
+
+                <p>“Oh, do you mean&mdash;no, I’m not an agent if that’s what you mean. My name is Hans.
+                I’m a tailor. This is just something I put on in an attempt to get out of here.”
+                The man put down the rod.</p>
+
+                <p>“One second. Hans, you say. Where are you from?”</p>
+
+                <p>“<i>Altstadt</i>. It’s a small town in the collapsed state of Dorovia.”</p>
+
+                <p>He opened a filing cabinet that sat beside his desk and fiddled through it for a bit. He 
+                took out a paper, read a few lines, looked up at Hans a few times, nodded and put back the
+                piece of paper. Then, with the enthusiasm of someone who had just laid eyes on a
+                long lost brother, he got up and walked towards Hans. The man placed his hands on Hans’ 
+                shoulders and smiled.</p>
+
+                <p>“Sorry about that. You can never be too careful. I’m Alan Bards. Please
+                have a seat.”</p>
+
+                <p class='pic9-link'>Hans sat down on the shiny leather chair. Mr. Bards sauntered to the
+                hatch door and locked it. “I always forget to do that,” he said as he walked towards 
+                the leather chair beside Hans and took a seat.</p>
+
+                <p>Mr. Bards had a round head and several streaks of grey hair poking out of his skull. He 
+                wore thick glasses, without which he was practically blind.</p>
+
+                <p>“Now, about this agent. He didn’t have any friends who might have followed you
+                here, did he?”</p>
+
+                <p>“Umm&mdash;no. He was actually, how can I put it&mdash;dead. We found him in the forest.”</p>
+
+                <p>“It’s getting out of hand, Hans. It’s really getting out of hand.”</p>
+
+                <p>“What is, Mr. Bards?”</p>
+
+                <p>“This whole project. The IRS are on my back because they think I’ve put together 
+                this place as a tax haven. Sure, it slipped my mind to declare it on my tax return 
+                forms, but I wanted to keep a lid on things until we published our paper. We had a 
+                supposedly friendly conversation a few weeks ago, at their behest. Man, were they 
+                brutal, dismantling me as they did with such Teutonic ferocity that you’d think we 
+                were in a World Cup semifinal. Now everyone is involved. The NSA, the FBI, the 
+                Germans, Starbucks.”</p>
+
+                <p>“Starbucks? Have they set up shop here?”</p>
+
+                <p>“It was their UK-based accounting department that was mainly interested in the project.”</p>
+
+                <p>“What exactly is this project?”</p>
+
+                <p>Mr. Bards took a moment to compose his reply. “I wanted to create a world that no longer 
+                exists. We got an 80 million dollar grant to teach Computer Science to a broad audience in a novel 
+                way. So we collaborated with the NSA who, bless them, already had a global surveillance program going 
+                on. They were seeking atonement for past sins, and so they helped us develop a cohort of people who 
+                at some point in their recent past had expressed, in speech, in writing or in thought, a wish to 
+                learn something entirely new.”</p>
+
+                <p>“Even the Mandrill? He seemed pretty pig-headed.”</p>
+
+                <p>“Aah, well, we did have quite a few false positives. The NSA’s sentiment analysis algorithm, 
+                unlike MI6's, wasn’t able to discriminate between irony and genuine emotion. The ungrateful 
+                primate. He's in cahoots with those operatives, would you believe it?</p>
+
+                <p class='footnote11-link'>“In any case, we used sea-creatures as agents and put together 
+                this self-contained series of finite worlds, nested within each other like a set of
+                matryoshka dolls. Everything you see around you is 3D-printed. Everything.</p>
+
+                <p>“We repurposed the insides of those creatures to support life. It’s all very clever. 
+                <i>Big Brother’s Younger Brother</i>. That’s what it’s called. The idea is that you
+                learn things indirectly and situationally. The lessons get simpler the deeper you go, and 
+                the harder ones, you learn on the way out.”</p>
+
+                <p>“Couldn’t you have just sent us to a training program in some idyllic location,
+                like the Seychelles?”</p>
+
+                <p>“I wish we had, Hans. I really wish we had. Frankenstein, that’s what this is. A
+                Frankenstein deep in the belly of the Pacific Ocean. I had no idea that humans were
+                this non-deterministic and irrational. They seem so civil online.</p>
+
+                <p>“The NSA are pissed off at us for having told a few people about our collaboration with 
+                the agency. The deal was supposed to be classified, you see, but we didn’t know any better. 
+                Granted, tagging Admiral Rogers on Facebook and asking our followers to &lsquo;big it up for 
+                him&rsquo; might have been a step too far. What can I say. We were young and foolish. 
+                Well&mdash;we were foolish.</p>
+
+                <p>“Out of spite, they gave the device that shrinks and modifies people’s bodies so that 
+                they can survive in this aquatic world to half the planet’s intelligence agencies. All in 
+                the hopes of bringing poor old Bards to justice. That’s why I’m hiding in this bunker. I 
+                need to figure out my next move.”</p>
+
+                <p>“My two friends are missing, Mr. Bards. Do you know who might have taken them?”</p>
+
+                <p>“Definitely agents. They’re trying to get to me, and anyone they come across is
+                seen as a potential lead.”</p>
+
+                <p>“The only way out of this current world&mdash;the deepest one&mdash;is through the 
+                fish’s exit passage, which is located in my hideout.” He pointed to a map on the wall 
+                and I was able to discern the hideout’s location. “The other exit passages are in
+                similar hideouts in the other two outer worlds. They’re manned by my colleagues
+                Sebastian and Laura. You’ll want to head out now. If those agents get to the ocean
+                with your friends, you’ll probably never see them again.”</p>
+
+                <p>Hans thanked Mr. Bards and got up to leave.</p>
+
+                <p>“Just one question, Mr. Bards. If you don’t mind, that is. Why me? I’m sure
+                there were lots of other people who must have fit your selection criteria. Why did
+                you pick me?”</p>
+
+                <p>“Well, a teacher might ask a question in class and decide to pick that eager 
+                student in the front row to answer it. Another teacher might ask a question and then 
+                glance around the room and notice that quiet student in the corner, the one looking away 
+                for fear of making eye contact with his teacher, dreading the thought of having to speak 
+                up in front of his peers. The teacher hears that dark horse’s racing heart through the 
+                sound of his heavy breathing, and knows that that seemingly aloof student is more than 
+                meets the eye. And so the teacher calls on the boy, and by doing so, transforms him.”</p>
+
+                <p>Mr. Bards took off his glasses and placed his hand on Hans’ shoulder. “Let me tell 
+                you something for nothing, Hans. There’s Einstein in a patent office and then there’s a 
+                boiling frog. Here, you can fly by the seat of your pants! Being a cat’s whisker from 
+                danger is not a bad place to be in life.”</p>
+
+                <p>Hans thought it an apt sentiment. All the same, he opened the hatch door and left. There 
+                was no time to waste.</p>
+
+                <p>Hans got to Mr. Bards’ hideout and found another strip of Joan’s dress right in
+                front of the entrance. The lair was bare and so the wrinkly lump that Mr. Bards had told him 
+                of wasn’t too difficult to find.</p>
+
+                <p>“Here goes,” he said and then jumped into the unknown. The lack of air knocked him 
+                out almost immediately. No Aunt Jennifer this time, though. Progress.</p>
+
+                <p>As Hans’ ears adjusted to the voices of people mumbling in the distance, he realized 
+                that he was on a dusty old street. A full moon lit up the houses that lined the
+                block and there, near the end of the street, he saw a bustling pub.</p>
+
+                <p>Hans clenched his fists and found himself repeating something that Mr. Bards had mumbled 
+                during their recent encounter.</p>
+
+                <p>“There had better be one hell of a T-shirt at the end of all of this.”</p>
+
+                <p class='no-indent authors-outro'>Special thanks are due to Karen Giangreco and Bridget McKenna 
+                for their thoughts and suggestions, all of which have undoubtedly improved this work. <!--This 
+                project is a brew of Terry Pratchett, Wes Andersen and The Phantom Tollbooth. -->
+                The story’s upcoming two parts will follow a similar direction. If you have strong opinions about 
+                the project, I look forward to your contributions 
+                <a href='https://github.com/almossawi/hans'>on GitHub</a>.</p>
+            </div>
+
+            <div class='col-xs-3 sidebar'>
+                <div class='pic pic1'>
+                    <a data-toggle='lightbox' href='images/pic1.png'>
+                        <img class='thumb-image' src='images/pic1.png'>
+                    </a>
+                    <a class='show-tooltip no-underline' href='#'><i class="fa fa-plus-square-o"></i></a>
+                </div>
+                <div class='pic pic3'>
+                    <a data-toggle='lightbox' href='images/pic3.png'>
+                        <img class='thumb-image' src='images/pic3.png'>
+                    </a>
+                    <a class='show-tooltip no-underline' href='#'><i class="fa fa-plus-square-o"></i></a>
+                </div>
+                <div class='pic pic4'>
+                    <a data-toggle='lightbox' href='images/pic4.png'>
+                        <img class='thumb-image' src='images/pic4.png'>
+                    </a>
+                    <a class='show-tooltip no-underline' href='#'><i class="fa fa-plus-square-o"></i></a>
+                </div>
+                <div class='pic pic4-zoom'>
+                    <a data-toggle='lightbox' href='images/pic4-zoom.png'>
+                        <img class='thumb-image' src='images/pic4-zoom.png'>
+                    </a>
+                    <a class='show-tooltip no-underline' href='#'><i class="fa fa-plus-square-o"></i></a>
+                </div>
+                <div class='pic pic5'>
+                    <a data-toggle='lightbox' href='images/pic5.png'>
+                        <img class='thumb-image' src='images/pic5.png'>
+                    </a>
+                    <a class='show-tooltip no-underline' href='#'><i class="fa fa-plus-square-o"></i></a>
+                </div>
+                <div class='pic pic6'>
+                    <a data-toggle='lightbox' href='images/pic6.png'>
+                        <img class='thumb-image' src='images/pic6.png'>
+                    </a>
+                    <a class='show-tooltip no-underline' href='#'><i class="fa fa-plus-square-o"></i></a>
+                </div>
+                <div class='pic pic8'>
+                    <a data-toggle='lightbox' href='images/pic8.png'>
+                        <img class='thumb-image' src='images/pic8.png'>
+                    </a>
+                    <a class='show-tooltip no-underline' href='#'><i class="fa fa-plus-square-o"></i></a>
+                </div>
+                <div class='pic pic9'>
+                    <a data-toggle='lightbox' href='images/pic9.png'>
+                        <img class='thumb-image' src='images/pic9.png'>
+                    </a>
+                    <a class='show-tooltip no-underline' href='#'>show tooltip</a>
+                </div>
+
+                
+                <p class='footnote footnote1'><a name='travelling-salesman'></a>A well-known problem in 
+                Computer Science theory is the <i>Travelling Salesman</i> problem, which asks: given 
+                a set of locations, what is the shortest route that visits each one of those location 
+                exactly once and returns to the original location. 
+                <a href='#travelling-salesman' class='anchor tiny-button'><i class='fa fa-anchor'></i></a></p>
+
+                <p class='footnote footnote2'><a name='huffman-coding'></a>This method of optimizing for 
+                space comes partly from an idea in information theory, where it is said that information 
+                that occurs more often is less meaningful and may therefore be discarded. In 1952, David Huffman
+                came up with an algorithm that reduced the amount of space required to store information. It is 
+                called <i>Huffman coding</i>. 
+                <a href='#huffman-coding' class='anchor tiny-button'><i class='fa fa-anchor'></i></a></p>
+
+                <p class='footnote footnote3'><a name='binary-search'></a>The fastest way to search for a word 
+                in an ordered collection of words is to start somewhere near the middle and then gradually go
+                back and forth, effectively halving the collection at each step. It is how we might
+                look for a word in, say, a telephone directory or a dictionary. This is in fact how
+                a <i>binary search</i> algorithm works. 
+                <a href='#binary-search' class='anchor tiny-button'><i class='fa fa-anchor'></i></a></p>
+
+                <p class='footnote footnote4'><a name='quality-attributes'></a>Solutions to engineering problem 
+                typically involve some kind of tradeoff between competing quality attributes. For instance, the 
+                more secure a system is, the less usable it might be. In this case, the best solution traded the 
+                destruction of a popular novel for the preservation of a human soul. A difficult, but perhaps on 
+                balance, worthwhile tradeoff. 
+                <a href='#quality-attributes' class='anchor tiny-button'><i class='fa fa-anchor'></i></a></p>
+
+                <p class='footnote footnote5'><a name='optimization'></a>It is always reasonable to find some 
+                solution to a problem and then worry about optimizing it. In the words of Computer Scientist Tony
+                Hoare, “Premature optimization is the root of all evil.” 
+                <a href='#optimization' class='anchor tiny-button'><i class='fa fa-anchor'></i></a></p>
+
+                <p class='footnote footnote6'><a name='not-invented-here'></a>A prevalent phenomenon in software 
+                engineering is the Not-Invented-Here (NIH) syndrome, whereby one attempts to solve an already-solved
+                problem, effectively reinventing the wheel. The preferred alternative of course, is to use and build 
+                on the works of others. 
+                <a href='#not-invented-here' class='anchor tiny-button'><i class='fa fa-anchor'></i></a></p>
+
+                <p class='footnote footnote7'><a name='dijkstra'></a>This method for finding the shortest path 
+                from one point to another, given a set of points, is an example of a graph search algorithm
+                called Dijkstra’s algorithm. It was published in 1959 by Dutch computer scientist,
+                Edsger W. Dijkstra. 
+                <a href='#dijkstra' class='anchor tiny-button'><i class='fa fa-anchor'></i></a></p>
+
+                <p class='footnote footnote8'><a name='guards'></a>When designing a system, it is always better 
+                to guard a protected component with a whitelist rather than a blacklist. For instance, in a
+                system where there are two types of users&mdash;the boss and subordinates&mdash;it is better
+                to have a guard that says, “only the boss can access this component” rather than, “anyone
+                <i>other than</i> subordinates can access this component.” The reason being that if a
+                third type of user were to be added, say, senior subordinates, the system might
+                inadvertently grant access to said component to those people. 
+                <a href='https://twitter.com/thegrugq/status/566288968094740480'>Here is what can 
+                happen</a> if you don’t do that.
+                <a href='#guards' class='anchor tiny-button'><i class='fa fa-anchor'></i></a></p>
+
+                <p class='footnote footnote9'><a name='invariants'></a>Hasty generalizations in engineering systems 
+                can lead to disasters like the Ariane 5 rocket explosion. Just because some system has exhibited 
+                certain behavior under specific conditions does not mean that it will exhibit that same behavior 
+                under different conditions. In real-life systems, this lack of foresight can lead to defects in the 
+                field that are undetectable in the lab. To help ensure that systems exhibit the same behavior at all 
+                times, engineers typically specify a set of 
+                <a href='http://en.wikipedia.org/wiki/Invariant_%28computer_science%29'>invariants</a> 
+                for a particular system, which is to say, they specify a set of propositions that must 
+                always be true, irrespective of context. 
+                <a href='#invariants' class='anchor tiny-button'><i class='fa fa-anchor'></i></a></p>
+
+                <p class='footnote footnote10'><a name='defense-in-depth'></a>When it comes to security, no singular 
+                method is fool-proof. That is why, in systems where it is a necessary quality attribute, security is 
+                implemented in layers, hence the principal of <i>Defense in Depth</i>. 
+                <a href='#defense-in-depth' class='anchor tiny-button'><i class='fa fa-anchor'></i></a></p>
+
+                <p class='footnote footnote11'><a name='recursion'></a>Mr. Bards’ explanation is a reference to 
+                a concept called recursion. Recursion is an elegant and succinct way of thinking about a problem. It 
+                involves an algorithm invoking itself numerous times in order to deconstruct a problem down to its 
+                elementary form. After that, the algorithm recoils and has its moment of epiphany in the form of a 
+                solution on the way back. Recursion is a hugely important concept because it forms the groundwork for 
+                a class of algorithms known as <i>divide-and-conquer</i>. A typical application of 
+                divide-and-conquer algorithms is sorting. The metaphor draws on the fact that these algorithms break up 
+                a collection of things into smaller and smaller collections, until they can be broken up no more, 
+                following which they sort the smallest collections, then the slightly bigger ones, and so on, until 
+                the entire collection is sorted. 
+                <a href='#recursion' class='anchor tiny-button'><i class='fa fa-anchor'></i></a></p>
+            </div>
+        </div>
+    </div><!-- close main-container -->
+
+    <div class='footer'>
+        <div class='footer-content'>
+            <div class='support-section-anchor'><a name='support'> </a> </div>
+
+            <p class='no-indent'>Hans in the Land of Bards &middot; <span class=
+            'lowercase-this-motha'>Story, creative direction and website by</span> Ali
+            Almossawi &middot; <span class='lowercase-this-motha'>illustrations by</span> Alejandro
+            Giraldo &middot; <span class='lowercase-this-motha'>This work is dedicated to
+            the</span> creative commons (CC BY-NC) &middot; <span class='lowercase-this-motha'>Get
+            in touch at</span> ali@almossawi.com &middot; <span class='lowercase-this-motha'>First
+            published on</span> March 15, 2015 &middot; <span class='lowercase-this-motha'>The rest of
+            the story continues in</span> Part II: Hans in the Belly of the Nihilistic Tuna Fish
+            <span class='lowercase-this-motha'>and</span> Part III: Hans in the Mantle of the
+            Socially Awkward Deep Sea Octopus <span class='lowercase-this-motha'>that are scheduled
+            for release later in the year.</span></p>
+
+            <p class='no-indent'><a class='tiny-button fa fa-2x fa-smile-o' href=
+            'https://almossawi.com' title='Profile'></a> <a class='tiny-button fa fa-2x fa-twitter' href=
+            'https://twitter.com/alialmossawi' title='Twitter'></a> <a class='tiny-button fa fa-2x fa-instagram'
+            href='https://instagram.com/almossawi' title='Instagram'></a> <a class='tiny-button fa fa-2x fa-envelope-o'
+            href='mailto:ali@almossawi.com' title='Email'></a></p>
+
+            <img class='hardcover-sneak' src='images/hardcover.png'>
+
+            <p class='no-indent hardcover-sneak-prose'>Wouldn’t it be great to see all three parts 
+            in print? I’ve been imagining it feeling like <a href=
+            'http://www.goodreads.com/book/show/13593346-latin-for-gardeners'>this
+            wonderful book</a>.<!-- If you’re a publishing house and passionate about educational
+            fiction, I’d love to hear from you.--></p>
+        </div><!-- close footer content -->
+    </div><!-- close footer -->
+
+    <div class='main-container concepts'>
+        <div class='concepts-gradient'></div>
+        
+        <p class='no-indent prose-for-the-reader'>Here are explanations of some of the concepts
+        that were pointed out in the story.</p>
+
+        <p class='no-indent'>There are typically numerous ways of solving the same problem. Let’s
+        start calling those ways <i>algorithms</i>. One method for determining the best algorithm
+        to use is to consider two aspects of it: how long it takes to complete and how much space
+        it requires. We’ll call the former the algorithm’s runtime complexity and the latter its
+        space complexity. Fancy-sounding names, you might have noticed. That’s how we roll. Let us
+        now consider how we might evaluate an algorithm based on its runtime&nbsp;complexity.</p>
+
+        <p>An intuitive way of measuring how long an algorithm takes to complete might be to start
+        a clock when the algorithm begins running, stop the clock when it’s done and then observe
+        the elapsed time. But this method relies on the particular clock that we use, which can
+        become a problem. Different machines may have different capabilities and may therefore give
+        different readings. A better way of measuring time is to count the number of fundamental
+        operations that the algorithm performs. If we’re doing simple arithmetic, for instance,
+        these operations might be addition or&nbsp;multiplication.</p>
+
+        <p>Say that you have an algorithm that determines the sum of a set of integers from 1 to
+        <i>n</i>. For instance, if n&nbsp;=&nbsp;3, then our sum ought to be 
+        1&nbsp;+&nbsp;2&nbsp;+&nbsp;3&nbsp;=&nbsp;6. When we say
+        integers, we mean whole numbers, i.e. not fractions, though for simplicity, let’s just call
+        them numbers. Now, if we were to express the algorithm for finding the sum of the first
+        <i>n</i> numbers, then it might look something like the following:</p>
+
+<pre>
+wait until we get n
+    let sum = 0
+    let i = 1
+    repeat n times
+        i = i + 1
+        sum = sum + i
+    show sum
+stop
+</pre>
+
+        <p>Here, we’re looping through a set of numbers starting from 1 and going up to
+        <i>n</i>. On each iteration of the loop, we’re doing two things: 1) setting
+        <i>i</i> to be a number between 1 and <i>n</i>, and then 2) we’re adding <i>i</i> to
+        <i>sum</i>. Can you tell just by looking at the picture that we’ve painted so far what is
+        going to determine how long our algorithm runs for? It’s <i>n</i>, right. If <i>n</i> is 1,
+        then we only loop once and if it’s 10,000 then we’ll loop 10,000 times. Let’s keep this in
+        mind since it could be an issue if we expect to work with problems that have large values
+        of <i>n</i>.</p>
+
+        <p>Let us now also ask, what is the fundamental operation here? Of the three operations
+        that we’re doing—comparison (checking if <i>i</i> is less than or equal to <i>n</i> on each
+        iteration of the loop), assignment (<i>i</i> and <i>sum</i>) and addition (<i>i</i> and
+        <i>sum</i>)—the last one is clearly our fundamental operation. In other words, it’s the
+        essence of what our algorithm does, so let’s focus on that.</p>
+
+        <p>How many of those operations do we expect to do before the algorithm terminates? Well,
+        we add 1 to <i>i</i> on each iteration of the loop in order to increment it. So by the end
+        of the loop we will have added values to <i>i</i> a total of <i>n</i> times. In like
+        manner, we add <i>i</i> to <i>sum</i> once per iteration, so by the end of the loop, we end
+        up doing that <i>n</i> times as well. Hence, we end up doing n * n = 2n addition
+        operations.</p>
+
+        <p>There’s actually one more addition operation that we do on the very last
+        iteration of the loop. We do that when we increment <i>i</i> by 1, only to realize that it
+        is now greater than n, and therefore reason for us to exit the loop. Although it might not
+        be apparent, we do in fact use <i>i</i> to help us determine how many times we’ve gone
+        through the loop and to ensure that we only go through it <i>n</i> times. Our algorithm’s
+        runtime complexity may therefore be expressed as the following function.</p>
+
+        <p class='text-center no-indent code-high-top code-high-bottom'><code>t(n) = 2n +
+        1</code></p>
+
+        <p>By looking at our runtime complexity, it should be clear that its rate of growth (also
+        called its order) is linear, which is to say that if the number of elements doubles, we’d
+        expect the number of operations to double. Here are a few other rate-of-growth functions
+        that we typically encounter when analyzing algorithms.</p>
+
+        <table class="table table-condensed text-center table-high-top">
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>log n</td>
+                    <td>n</td>
+                    <td>n log n</td>
+                    <td>n<sup>2</sup></td>
+                    <td>2<sup>n</sup></td>
+                </tr>
+                <tr>
+                    <td>constant</td>
+                    <td>logarithmic</td>
+                    <td>linear</td>
+                    <td>linearithmic</td>
+                    <td>quadratic</td>
+                    <td>exponential</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>The nice thing about characterizing algorithms in terms of their rate of growth is that
+        we can then tell immediately and intuitively that, say, a logarithmic algorithm will scale
+        better than a linear one. If we therefore ever find the need to compare two algorithms that
+        solve the same problem, and find one algorithm to be linear and the other to be
+        logarithmic, for a large enough number of elements, the latter will likely be the better
+        one, on average. The following chart compares a few different rates of growth. Notice how
+        the differences in the number of operations performed&mdash;shown on a log-scale here&mdash;become 
+        more prominent as the number of elements increases.</p>
+
+        <div class='switch-box text-center'>
+            <a class='switch no-underline active switch-to-log' href='#'>log</a> 
+            <a class='switch no-underline switch-to-linear' href='#'>linear</a>
+        </div>
+
+        <div class="chart"></div>
+
+        <div class='legend'>
+            <span class='mg-line1-legend-color'>&mdash;log n&nbsp;&nbsp;</span> <span class=
+            'mg-line2-legend-color'>&mdash;n&nbsp;&nbsp;</span> <span class=
+            'mg-line3-legend-color'>&mdash;n log n&nbsp;&nbsp;</span> <span class=
+            'mg-line4-legend-color'>&mdash;n<sup>2</sup></span>
+        </div>
+
+        <p>What’s the deal with constant time then? Can we really have an algorithm that’s fast
+        regardless of the number of elements? If we write an algorithm that doesn’t depend on
+        <i>n</i> whatsoever, then yes. Say we’re able to come up with an alternative algorithm to
+        the one we wrote earlier that has a runtime complexity of <code>t(n)&nbsp;=&nbsp;3</code>.
+        <!-- Here’s how that looks when graphed.--></p>
+
+        <p>We call that constant time because the algorithm performs no more than a fixed number of
+        operations regardless of how many elements we have. We can now improve our algorithm from
+        before, which calculates the sum of <i>n</i> numbers:</p>
+
+<pre>
+wait until we get n
+    let sum = n * (n + 1) / 2
+    show sum
+stop
+</pre>
+
+        <p>That’s much faster, don’t you&nbsp;think?</p>
+
+        <p class='no-indent'><span class='concept-title'>HUFFMAN CODING</span>&nbsp; The brain, as
+        they say in neuroscience, has the ability to detect salience. When you’re in a quiet room
+        and hear a noise of any kind, your brain will pick it up. If you’re in a noisy room and
+        hear a sound that is unlike those noises, your brain will pick it up too. In a sense,
+        information that occurs more often is considered less meaningful, which is why the brain
+        knows to filter such input.</p>
+
+        <p>In the story you just read, the guard’s method for optimizing
+        his directory for space comes partly from an idea in information theory, where it is said
+        that &ldquo;only infrmatn esentil to understandn mst b tranmitd.&rdquo; The idea is part of
+        a theory of communication published by the mathematician Claude Shannon in 1948. Because of
+        various properties of the English language, notice that the previous sentence can be fully
+        understood despite the omitted letters. Hence, information that is predictable is said to
+        be redundant and may therefore be left out.</p>
+
+        <p>In 1952, David Huffman came up with an algorithm that reduced the amount of space
+        required to store information. The way computers store information is by mapping the
+        letters in our alphabet&mdash;as well as numbers and other characters&mdash;to a set of
+        numerical values. Those values are then stored using a language that the computer can
+        understand, called <i>binary</i>. Each character is mapped to a binary code that may
+        consist of seven bits. So for instance, the letter <i>a</i> is mapped to the value 97, which
+        looks like this in binary:</p>
+
+        <p class="text-center no-indent high-bottom"><code>1100001</code></p>
+
+        <p>The letter <i>b</i> is mapped to the value 98, which looks like this in binary:</p>
+
+        <p class='text-center no-indent code-high-top code-high-bottom'><code>1100010</code></p>
+
+        <p>Thus, if we wanted to represent the word <i>hans</i> in binary, it would look like this,
+        with each letter taking up seven bits for a total of 28 bits:</p>
+
+        <p class='text-center no-indent code-high-top code-high-bottom'>
+        <code>1101000110000111011101110011</code></p>
+
+        <p>The nice thing about characters having binary codes with the same length (seven bits in this
+        case) is that it makes decoding a binary string easy. All we have to do is read off every seven 
+        bits and then use a table like <a class="underline" href=
+        "http://en.wikipedia.org/wiki/ASCII#ASCII_printable_code_chart">this one</a> to decode it
+        to English.</p>
+
+        <p>Huffman was a maverick, though. He looked at those seven bits and said, &ldquo;Ain’t nobody
+        got time for that. Surely, there’s a way to compress things.&rdquo;</p>
+
+        <p>His friends pleaded with him. &ldquo;No, Huffman,&rdquo; they said. &ldquo;It can’t be done, 
+        Huffman. It’s too much to ask of one man, Huffman. Don’t be a hero, Huffman. Your peers, your 
+        professor have all tried to no avail, Huffman.&rdquo; But Huffman didn’t care. He was willing to 
+        propel himself into the unknown, if it meant that he could potentially come up with an optimal 
+        binary representation for a set of characters.</p>
+
+        <p>Rather than using fixed-length binary codes, Huffman opted for variable-length ones. He
+        exploited the fact that some characters in a sentence appear more often than other
+        characters, and so he mapped the more frequently occurring letters to smaller values, and
+        hence shorter binary codes, and less frequently occurring ones to longer binary codes. His
+        algorithm therefore takes a body of information and uses it to generate a set of binary
+        codes.
+        <!-- It then uses that set to encode the information before it’s sent and to decode 
+        it once it’s received. -->
+        For example, say that we have determined that for a given body of information, the
+        frequency distribution of characters is as follows:</p>
+
+        <table class="table table-condensed text-center table-high-top">
+            <tbody>
+                <tr>
+                    <td>e</td>
+                    <td>a</td>
+                    <td>n</td>
+                    <td>h</td>
+                    <td>s</td>
+                    <td>l</td>
+                    <td>f</td>
+                    <td>j</td>
+                </tr>
+                <tr>
+                    <td>705</td>
+                    <td>605</td>
+                    <td>431</td>
+                    <td>255</td>
+                    <td>242</td>
+                    <td>217</td>
+                    <td>100</td>
+                    <td>59</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Notice that the characters are sorted from left to right in order of most to least
+        frequent. Huffman’s algorithm takes the smallest pair of characters, sums their values,
+        storing the result in a new temporary character, and then sorts the set. It repeats the
+        process until we have a single pair of characters.</p>
+
+        <p>What we end up with is essentially a tree, where each node (a character) is connected to
+        the pair of nodes that it came from, with two edges: one labelled 0 and one labelled 1. If
+        we do that with the above set of characters, we end up with something like the following
+        table. Each column, starting from the second one, is one step of the algorithm.</p>
+
+        <div class="huffman-animation table-high-top">
+            <!-- column 1 -->
+            <div class="col-xs-2 column column1">
+                <div class="row">
+                    <div class="col-xs-6 key">e</div>
+                    <div class="col-xs-6 value">705</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">a</div>
+                    <div class="col-xs-6 value">605</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">n</div>
+                    <div class="col-xs-6 value">431</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">h</div>
+                    <div class="col-xs-6 value">250</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">s</div>
+                    <div class="col-xs-6 value">242</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">l</div>
+                    <div class="col-xs-6 value">217</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">f</div>
+                    <div class="col-xs-6 value">100</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">j</div>
+                    <div class="col-xs-6 value">59</div>
+                </div>
+            </div>
+            
+            <!-- column 2 -->
+            <div class="col-xs-2 column column2">
+                <div class="row">
+                    <div class="col-xs-6 key">e</div>
+                    <div class="col-xs-6 value">705</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">a</div>
+                    <div class="col-xs-6 value">605</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">n</div>
+                    <div class="col-xs-6 value">431</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">h</div>
+                    <div class="col-xs-6 value">250</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">s</div>
+                    <div class="col-xs-6 value">242</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">l</div>
+                    <div class="col-xs-6 value">217</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">f'</div>
+                    <div class="col-xs-6 value">159</div>
+                </div>
+            </div>
+            
+            <!-- column 3 -->
+            <div class="col-xs-2 column column3">
+                <div class="row">
+                    <div class="col-xs-6 key">e</div>
+                    <div class="col-xs-6 value">705</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">a</div>
+                    <div class="col-xs-6 value">605</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">n</div>
+                    <div class="col-xs-6 value">431</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">l'</div>
+                    <div class="col-xs-6 value">376</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">h</div>
+                    <div class="col-xs-6 value">250</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">s</div>
+                    <div class="col-xs-6 value">242</div>
+                </div>
+            </div>
+            
+            <!-- column 4 -->
+            <div class="col-xs-2 column column4">
+                <div class="row">
+                    <div class="col-xs-6 key">e</div>
+                    <div class="col-xs-6 value">705</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">a</div>
+                    <div class="col-xs-6 value">605</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">h'</div>
+                    <div class="col-xs-6 value">492</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">n</div>
+                    <div class="col-xs-6 value">431</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">l'</div>
+                    <div class="col-xs-6 value">376</div>
+                </div>
+            </div>
+            
+            <!-- column 5 -->
+            <div class="col-xs-2 column column5">
+                <div class="row">
+                    <div class="col-xs-6 key">n'</div>
+                    <div class="col-xs-6 value">807</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">e</div>
+                    <div class="col-xs-6 value">705</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">a</div>
+                    <div class="col-xs-6 value">605</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">h'</div>
+                    <div class="col-xs-6 value">492</div>
+                </div>
+            </div>
+            
+            <!-- column 6 -->
+            <div class="col-xs-2 column column6">
+                <div class="row">
+                    <div class="col-xs-6 key">a'</div>
+                    <div class="col-xs-6 value">1097</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">n'</div>
+                    <div class="col-xs-6 value">807</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">e</div>
+                    <div class="col-xs-6 value">705</div>
+                </div>
+            </div>
+            
+            <!-- column 7 -->
+            <div class="col-xs-2 column column7">
+                <div class="row">
+                    <div class="col-xs-6 key">e'</div>
+                    <div class="col-xs-6 value">1512</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 key">a'</div>
+                    <div class="col-xs-6 value">1097</div>
+                </div>
+            </div>
+        </div>
+
+        <p>When we represent this table as a tree, it all becomes clear. A character’s binary code
+        is the string that you get when you read off the bits from the left-most node to that
+        character’s node. So for example, <i>e</i> is 11 and <i>f</i> is 10001.</p>
+
+        <div class="huffman-tree"></div>
+
+        <p>Here are our optimized binary codes. Notice how the more frequent letters have shorter
+        codes:</p>
+
+        <table class="table table-condensed text-center table-high-top">
+            <tbody>
+                <tr>
+                    <td>e</td>
+                    <td>a</td>
+                    <td>n</td>
+                    <td>h</td>
+                    <td>s</td>
+                    <td>l</td>
+                    <td>f</td>
+                    <td>j</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>01</td>
+                    <td>101</td>
+                    <td>001</td>
+                    <td>000</td>
+                    <td>1001</td>
+                    <td>10001</td>
+                    <td>10000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>How does the word <i>hans</i> now look in binary?</p>
+
+        <p class='text-center no-indent code-high-top high-bottom'><code>00101101000</code></p>
+
+        <p>We only needed 11 bits for that rather than 28 bits. Assigning a 1 or a 0 to a 
+        node’s children in the Huffman tree is done arbitrarily, i.e. <i>e</i> could have 
+        been 01 instead of 11. While binary codes aren’t guaranteed to be unique, they are 
+        guaranteed to be optimal. In any case, the Huffman tree is sent to the receiver 
+        along with the message so that the receiver can decode the message.</p>
+
+        <p class='no-indent'><span class='concept-title'>BINARY SEARCH</span>&nbsp; We mentioned
+        earlier that a logarithmic algorithm is intuitively better than a linear one. But how
+        exactly is it that we can solve a problem without inspecting all of our elements? Surely,
+        if we want to say something meaningful about a collection of things, we’ll need to take a
+        look at every one of those things first?</p>
+
+        <p>To illustrate what a logarithmic algorithm looks like, let’s take search. Say that we want 
+        to look up the word <i>flower</i> in a dictionary. What do we do? Well, we certainly won’t 
+        turn to <i>A</i> on the very first page and then proceed line-by-line. That would take ages. 
+        Instead, we open the dictionary to somewhere near the middle at, say, the Ls. Since the Fs 
+        are before the Ls, we’ll completely ignore all the pages to the right and focus just on the 
+        set of pages on the left. We know for sure that our word is going to be somewhere in there, 
+        so that becomes our new problem space. We do the same split-and-decide-which-way-to-go action, 
+        perhaps a few more times, gradually reducing the group of pages that we have to look through 
+        until we finally find our word.</p>
+
+        <p>Whenever you are able to halve the number of elements at every step, then you have a
+        logarithmic algorithm on your&nbsp;hands.</p>
+
+        <p>This particular algorithm is in fact so useful and prevalent that we have a name for it:
+        <i>binary search</i>. In the story, Hans was right to flip through the directory in a way
+        that’s analogous to binary search because it’s a reasonable way of searching for something
+        in an ordered list. Note the use of the word &lsquo;ordered&rsquo; there. The algorithm
+        only works because the words are sorted in a particular order.</p>
+
+        <p>Now imagine that you work as a copywriter for a company that makes dinner plates. You’ve
+        had this brilliant idea of adding something like this to the packaging: &ldquo;Strong
+        enough to withstand a fall from the 10th floor!&rdquo; You have access to a 100-storey
+        building and you would like to find out how strong the plates really are. Knowing what you
+        now know about binary search, what would you do?</p>
+    </div><!-- close main-container -->
+
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+*.php
+
+*.crt
+
+*.ico
+
+images/stripe_thumb.png
+
+images/paypal-donate.png
+
+images/paypal-donate-blue.png
+
+images/hamato.png
+
+css/mailchimp-slim-081711.css
