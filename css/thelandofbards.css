@@ -656,6 +656,10 @@ text {
     padding: 46px 0 6px 0;
 }
 
+.twitter-btn {
+    width: 90px;
+}
+
 .underline {
     border-bottom: 1px solid #ccc;
 }
