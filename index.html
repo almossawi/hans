@@ -1369,9 +1369,9 @@ wait until we get n
 stop
 </pre>
 
-        <p>Here, we’re looping through a set of numbers starting from 1 and going up to
+        <p>Here, we’re looping through a set of numbers starting from one and going up to
         <i>n</i>. On each iteration of the loop, we’re doing two things: 1) setting
-        <i>i</i> to be a number between 1 and <i>n</i>, and then 2) we’re adding <i>i</i> to
+        <i>i</i> to be a number between one and <i>n</i>, and then 2) we’re adding <i>i</i> to
         <i>sum</i>. Can you tell just by looking at the picture that we’ve painted so far what is
         going to determine how long our algorithm runs for? It’s <i>n</i>, right. If <i>n</i> is 1,
         then we only loop once and if it’s 10,000 then we’ll loop 10,000 times. Let’s keep this in
@@ -1385,14 +1385,14 @@ stop
         essence of what our algorithm does, so let’s focus on that.</p>
 
         <p>How many of those operations do we expect to do before the algorithm terminates? Well,
-        we add 1 to <i>i</i> on each iteration of the loop in order to increment it. So by the end
+        we add one to <i>i</i> on each iteration of the loop in order to increment it. So by the end
         of the loop we will have added values to <i>i</i> a total of <i>n</i> times. In like
         manner, we add <i>i</i> to <i>sum</i> once per iteration, so by the end of the loop, we end
         up doing that <i>n</i> times as well. Hence, we end up doing n * n = 2n addition
         operations.</p>
 
         <p>There’s actually one more addition operation that we do on the very last
-        iteration of the loop. We do that when we increment <i>i</i> by 1, only to realize that it
+        iteration of the loop. We do that when we increment <i>i</i> by one, only to realize that it
         is now greater than n, and therefore reason for us to exit the loop. Although it might not
         be apparent, we do in fact use <i>i</i> to help us determine how many times we’ve gone
         through the loop and to ensure that we only go through it <i>n</i> times. Our algorithm’s
