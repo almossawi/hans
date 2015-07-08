@@ -44,8 +44,9 @@ a:visited.tiny-button {
     padding: 0 7px 0 7px;
     position: fixed;
     height: 50px;
-    z-index: 5;
+    max-width: 100%;
     width: 100%;
+    z-index: 5;
 }
 
 .bottom-bar-fb-btn {
@@ -172,7 +173,8 @@ code {
     background-repeat: repeat-x;
     height: 200px;
     position: absolute;
-    width: 900px;
+    max-width: 900px;
+    width: 90%;
     z-index: 2;
 }
 
@@ -195,20 +197,17 @@ code {
 }
 
 .fb-btn {
-    margin-top: -9px;
+    margin-top: -11px;
 }
 
 .footer {
     background-color: #f5f5f5;
     border-bottom: 1px solid #ccc;
     border-top: 1px solid #ccc;
-    margin: 80px 0 40px 0;
-    width: 100%;
-}
-
-.footer {
-    margin: 30px 0 30px 0;
+    margin: 30px auto 30px auto;
+    max-width: 100%;
     padding: 20px 0 0 0;
+    width: 100%;
 }
 
 .footer p {
@@ -225,8 +224,10 @@ code {
 }
 
 .footer-content {
+    padding: 0;
     margin: 0 auto;
-    width: 900px;
+    max-width: 900px;
+    width: 100%;
 }
 
 .footnote {
@@ -238,7 +239,9 @@ code {
 }
 
 .hardcover-sneak {
+    max-width: 900px;
     padding: 110px 0 30px 0;
+    width: 100%;
 }
 
 .high-top {
@@ -288,7 +291,8 @@ html, body {
 }
 
 img.cover-image {
-    width: 900px;
+    max-width: 900px;
+    width: 100%;
 }
 
 img.thumb-image {
@@ -340,7 +344,8 @@ img.thumb-image {
 .main-container {
     font-size: 1.4rem;
     margin: 0 auto 50px auto;
-    width: 900px;
+    max-width: 900px;
+    width: 90%;
 }
 
 .main-container p.prose-for-the-reader {
@@ -423,7 +428,12 @@ img.thumb-image {
 
 .mommy-people-like-me {
     margin: 0 auto;
-    width: 660px;
+    max-width: 660px;
+    width: 100%;
+}
+
+.no-margin {
+    margin: 0;
 }
 
 .node circle {
@@ -492,7 +502,7 @@ p.stripe {
     display: inline-block;
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 1rem;
-    margin-left: 317px;
+    margin-left: 300px;
     margin-top: 10px;
     position: absolute;
     vertical-align: middle;
@@ -525,7 +535,9 @@ pre {
     background-color: #f3f6f6;
     border: 1px solid #c7e2e2;
     color: #3fb0ba;
-    margin: 30px 300px 30px 300px;
+    margin: 30px auto 30px auto;
+    min-width: 250px;
+    max-width: 350px;
     padding-bottom: 5px;
     padding-top: 5px;
 }
@@ -585,7 +597,6 @@ sub {
     font-size: 1rem;
     line-height: 1.6;
     padding-right: 7px;
-    text-align: justify;
 }
 
 .support-section-anchor {
@@ -652,8 +663,11 @@ text {
     color: #333;
     font-size: 1rem;
     line-height: 1.4;
+    margin: 0 auto;
+    min-width: 200px;
     padding: 3px 0 30px 0;
     text-align: center;
+    width: 48%;
 }
 
 .top-title {
@@ -696,4 +710,117 @@ and (max-device-width : 1024px) {
     .fb-btn {
         margin-top: -12px;
     }
+}
+
+/* ribbons 
+   http://codepen.io/eode9/pen/twkKm
+*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.corner-ribbon{
+  font-size:13px;
+  font-family:'Noto Sans', 'Open Sans', Arial, sans-serif;
+  width: 200px;
+  background: #e43;
+  position: absolute;
+  top: 25px;
+  left: -50px;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #f0f0f0;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+/* Custom styles */
+
+.corner-ribbon.sticky{
+  position: fixed;
+}
+
+.corner-ribbon.shadow{
+  box-shadow: 0 0 3px rgba(0,0,0,.3);
+}
+
+/* Different positions */
+
+.corner-ribbon.top-left{
+  top: 25px;
+  left: -50px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.corner-ribbon.top-right{
+  top: 25px;
+  right: -50px;
+  left: auto;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.corner-ribbon.bottom-left{
+  top: auto;
+  bottom: 25px;
+  left: -50px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.corner-ribbon.bottom-right{
+  top: auto;
+  right: -50px;
+  bottom: 25px;
+  left: auto;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+/* Colors */
+
+.corner-ribbon.white{background: #f0f0f0; color: #555;}
+.corner-ribbon.black{background: #333;}
+.corner-ribbon.grey{background: #999;}
+.corner-ribbon.blue{background: #39d;}
+.corner-ribbon.green{background: #2c7;}
+.corner-ribbon.turquoise{background: #1b9;}
+.corner-ribbon.purple{background: #95b;}
+.corner-ribbon.red{background: #e43;}
+.corner-ribbon.orange{background: #e82;}
+.corner-ribbon.yellow{background: #ec0;}
+
+
+@media only screen and (max-width: 1024px) {
+    html, body {
+        font-size: 16px;
+    }
+
+    .paypal-copy {
+        font-size: 0.7rem;
+    }
+
+    p.authors-intro {
+        font-size: 1.26rem;
+        line-height: 1.8;
+    }
+
+    p.stripe {
+        font-size: 0.6rem;
+    }
+
+    .top-title {
+        line-height: 0.85;
+    }
+}
+
+@media screen and (max-device-width: 1024px) and (orientation:portrait) {
+   .sidebar {
+       display: none;
+   }
 }
