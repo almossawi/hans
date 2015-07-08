@@ -256,10 +256,6 @@ html, body {
     padding: 0;
 }
 
-.huffman-animation {
-    height: 155px;
-}
-
 .huffman-animation .row {
     cursor: pointer;
 }
